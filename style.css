@@ -224,3 +224,25 @@ body {
     .info h3 { font-size: 2rem; }
     .info p { font-size: 1.4rem; }
 }
+.contact-info {
+    padding: 80px 20px;
+    background-color: #f0f4f8;
+}
+
+.contact-info h2 { font-size: 3rem; color: #1e3a8a; }
+
+.email-link {
+    display: inline-block;
+    font-size: 2.5rem; /* خط ضخم للإيميل */
+    color: #4a148c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    border-bottom: 4px solid #00e5ff;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    color: #00e5ff;
+    transform: scale(1.1);
+}
