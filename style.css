@@ -1,0 +1,35 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #1f1f1f;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav a {
+    color: #4CAF50; /* لون أخضر متماشٍ مع Green Software */
+    text-decoration: none;
+}
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+button {
+    background: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
