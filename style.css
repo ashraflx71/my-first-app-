@@ -56,3 +56,20 @@ header {
 .btn-submit:hover {
     background: #4ca1af;
 }
+.faq {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: right; /* لتناسب اللغة العربية */
+}
+
+.faq-item {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-right: 5px solid #4ca1af; /* خط جانبي يعطي شكل مميز */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.faq-item h4 { color: #2c3e50; margin-top: 0; }
