@@ -127,3 +127,100 @@ header p {
 footer p {
     font-size: 1.1rem;
 }
+/* تنسيقات عامة لراحة العين وأصحاب النظارات */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    line-height: 1.8; /* مسافة كبيرة بين السطور للراحة */
+    text-align: center;
+}
+
+/* البانر الكبير (Hero Section) */
+.hero-section {
+    background: linear-gradient(135deg, #1e3a8a, #4a148c);
+    color: white;
+    padding: 150px 20px; /* مسافة داخلية كبيرة لتملأ الشاشة */
+    min-height: 80vh; /* يجعل البانر يأخذ 80% من طول الشاشة */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem; /* خط ضخم جداً للعنوان الرئيسي */
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    max-width: 1000px;
+}
+
+.hero-section p {
+    font-size: 2rem; /* وصف كبير جداً وواضح */
+    max-width: 850px;
+    margin: 0 auto 50px;
+    opacity: 0.95;
+}
+
+/* الأزرار الضخمة */
+.hero-btns a {
+    display: inline-block;
+    padding: 25px 60px; /* زر كبير جداً سهل الضغط */
+    border-radius: 50px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.btn-primary { background: #00e5ff; color: #1e3a8a; }
+.btn-secondary { background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white; }
+
+/* قسم العمل الواحد (كبير ومالي الصفحة) */
+.work-section {
+    padding: 100px 20px;
+}
+
+.single-work {
+    max-width: 1100px; /* عرض كبير للكارت */
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.single-work img {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* صورة ضخمة وواضحة */
+    object-fit: cover;
+}
+
+.info {
+    padding: 60px; /* مسافات واسعة داخل الكارت */
+}
+
+.info h3 {
+    font-size: 3rem; /* عنوان المشروع كبير جداً */
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1.8rem; /* شرح المشروع واضح جداً */
+    color: #444;
+}
+
+/* لمسة الموبايل (عشان الكلام ميبقاش خارج الشاشة) */
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 2.8rem; }
+    .hero-section p { font-size: 1.5rem; }
+    .hero-btns a { padding: 20px 40px; font-size: 1.4rem; }
+    .info h3 { font-size: 2rem; }
+    .info p { font-size: 1.4rem; }
+}
