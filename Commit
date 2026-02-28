@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First App | القمة الرقمية</title>
+    <style>
+        :root {
+            --primary-green: #00ff88;
+            --dark-bg: #0a0f0d;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at center, #1a2a23 0%, var(--dark-bg) 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 3rem;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--primary-green), #60efff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--primary-green);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* لمسة برمجيات خضراء - نبض */
+        .eco-badge {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            margin-left: 10px;
+            box-shadow: 0 0 10px var(--primary-green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="eco-badge"></div>
+        <h1>مستقبل البرمجة الخضراء</h1>
+        <p>مرحباً بك في مشروعي الأول. نحن هنا لنبني تكنولوجيا تحترم الكوكب وتذهل العقول.</p>
+        <p style="font-style: italic; font-size: 0.9rem;">"تحت قيادة القائد الأعلى - 2026"</p>
+        <a href="#" class="btn">استكشف النظام</a>
+    </div>
+
+</body>
+</html>
