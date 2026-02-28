@@ -8,7 +8,10 @@ body {
     text-align: center;
     /* إضافة أنيميشن لظهور الصفحة بالكامل */
     animation: fadeInPage 1.5s ease-in;
-}
+}<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<link>
+
 
 header {
     background: linear-gradient(135deg, #2c3e50, #4ca1af);
