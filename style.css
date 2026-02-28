@@ -73,3 +73,57 @@ header {
 }
 
 .faq-item h4 { color: #2c3e50; margin-top: 0; }
+/* تكبير الخط العام في الصفحة */
+body {
+    font-size: 20px; /* كبرنا الخط الأساسي من 16 لـ 20 */
+    line-height: 1.6; /* مسافة مريحة بين السطور */
+}
+
+/* تكبير العناوين الرئيسية */
+header h1 {
+    font-size: 2.5rem; /* خط كبير جداً وواضح */
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.4rem; /* وصف العنوان يكون واضح */
+}
+
+/* تكبير عناوين الكروت والنصوص جواها */
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* تكبير خط الأزرار */
+.btn, .btn-submit {
+    font-size: 1.2rem;
+    padding: 15px 35px; /* كبرنا مساحة الزرار عشان يتشاف ويتحس */
+}
+
+/* تكبير نصوص الفورم (التواصل) */
+.contact-form input, 
+.contact-form textarea {
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+/* تكبير نصوص الأسئلة الشائعة */
+.faq-item h4 {
+    font-size: 1.4rem;
+}
+
+.faq-item p {
+    font-size: 1.2rem;
+}
+
+/* تكبير الفوتر */
+footer p {
+    font-size: 1.1rem;
+}
