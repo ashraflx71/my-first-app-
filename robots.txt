@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ashraflx71.github.io/my-first-app-/sitemap.xml
