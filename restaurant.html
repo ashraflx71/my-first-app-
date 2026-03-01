@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو مطعمك الاحترافي | طعم لا يقاوم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --accent-color: #e63946; --gold-color: #ffb703; --bg-dark: #1a1a1a; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #fffcf2; color: #333; }
+        
+        .header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center; color: white; padding: 60px 20px; text-align: center; }
+        .header h1 { font-size: 3rem; margin-bottom: 10px; color: var(--gold-color); }
+        
+        .menu-container { max-width: 900px; margin: -40px auto 50px; background: white; border-radius: 30px; padding: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .category-title { border-right: 5px solid var(--accent-color); padding-right: 15px; margin: 40px 0 20px; color: var(--accent-color); font-size: 1.8rem; }
+        
+        .item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #ddd; padding: 15px 0; transition: 0.3s; }
+        .item:hover { background: #fff9f0; padding-right: 10px; }
+        .item-info h4 { margin: 0; font-size: 1.3rem; }
+        .item-info p { margin: 5px 0 0; color: #777; font-size: 0.9rem; }
+        .price { color: var(--accent-color); font-weight: bold; font-size: 1.2rem; white-space: nowrap; }
+
+        .order-btn { display: block; background: #25d366; color: white; text-align: center; padding: 20px; margin-top: 40px; border-radius: 15px; text-decoration: none; font-size: 1.4rem; font-weight: bold; }
+        .order-btn:hover { background: #128c7e; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>مطعم البركة 🍔</h1>
+        <p>أطيب الأكلات الشعبية والمشويات بأيدٍ مصرية</p>
+    </header>
+
+    <div class="menu-container">
+        <h3 class="category-title">المشويات على الفحم</h3>
+        <div class="item">
+            <div class="item-info"><h4>كيلو كباب وكفتة</h4><p>يقدم مع سلطة وطحينة وعيش طازج</p></div>
+            <div class="price">450 ج.م</div>
+        </div>
+        <div class="item">
+            <div class="item-info"><h4>فرخة مشوية</h4><p>متبلة بخلطة البركة السرية</p></div>
+            <div class="price">220 ج.م</div>
+        </div>
+
+        <h3 class="category-title">وجبات التوفير</h3>
+        <div class="item">
+            <div class="item-info"><h4>وجبة ربع فرخة ورز</h4><p>مع شوربة لسان عصفور وخضار</p></div>
+            <div class="price">85 ج.م</div>
+        </div>
+        <div class="item">
+            <div class="item-info"><h4>ساندوتش حواوشي عملاق</h4><p>بالجبنة الموتزاريلا والفلفل</p></div>
+            <div class="price">60 ج.م</div>
+        </div>
+
+        <a href="https://wa.me/201380308018" class="order-btn">
+            <i class="fab fa-whatsapp"></i> اطلب الآن عبر الواتساب
+        </a>
+    </div>
+
+    <footer style="text-align: center; padding-bottom: 30px; color: #888;">
+        <p>تصميم مبرمج المحترفين: أشرف حسن</p>
+    </footer>
+
+</body>
+</html>
