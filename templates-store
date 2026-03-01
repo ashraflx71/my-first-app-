@@ -1,0 +1,28 @@
+<section id="templates" class="templates-store">
+    <div class="container">
+        <h2 class="section-title">متجر القوالب الجاهزة 🛍️</h2>
+        <p class="section-subtitle">اختر تصميمك المفضل.. واستلمه "تسليم مفتاح" في 24 ساعة!</p>
+
+        <div class="templates-grid">
+            <div class="template-card">
+                <div class="template-icon restaurant-bg">🍔</div>
+                <div class="template-info">
+                    <h3>قالب المطعم الذكي</h3>
+                    <p>منيو إلكتروني مع ربط مباشر بالواتساب للطلبات.</p>
+                    <div class="template-price">السعر: 500 ج.م</div>
+                    <a href="restaurant.html" target="_blank" class="btn-preview">معاينة القالب</a>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <div class="template-icon service-bg">🛠️</div>
+                <div class="template-info">
+                    <h3>قالب الفني المحترف</h3>
+                    <p>مناسب للفنيين والورش لعرض الخدمات والأسعار.</p>
+                    <div class="template-price">السعر: 400 ج.م</div>
+                    <a href="service.html" target="_blank" class="btn-preview">معاينة القالب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
