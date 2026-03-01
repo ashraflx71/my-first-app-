@@ -203,6 +203,33 @@
         <span class="dot" onclick="currentSlide(1)"></span>
     </div>
 </section>
+<script>
+    // 1. تشغيل سلايدر الآراء
+    let slideIndex = 0;
+    function showSlides() {
+        let slides = document.querySelectorAll(".testimonial-card");
+        let dots = document.querySelectorAll(".dot");
+        slides.forEach(s => s.classList.remove("active"));
+        dots.forEach(d => d.classList.remove("active"));
+        slideIndex++;
+        if (slideIndex > slides.length) slideIndex = 1;
+        slides[slideIndex-1].classList.add("active");
+        dots[slideIndex-1].classList.add("active");
+        setTimeout(showSlides, 4000);
+    }
+    showSlides();
+
+    // 2. تأثير الاحتفال عند الضغط على الأزرار
+    document.querySelectorAll('.btn-primary, .btn-price').forEach(btn => {
+        btn.addEventListener('click', () => {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+    });
+</script>
 
     });
 </script>
