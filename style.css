@@ -1,3 +1,67 @@
+.pricing-section {
+    padding: 100px 20px;
+    background-color: #f1f5f9;
+}
+
+.pricing-section h2 { font-size: 3.5rem; color: #1e3a8a; margin-bottom: 20px; }
+.pricing-section p { font-size: 1.8rem; margin-bottom: 60px; color: #64748b; }
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.price-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    width: 350px;
+    transition: transform 0.3s;
+    border: 2px solid #e2e8f0;
+}
+
+.price-card.featured {
+    border: 4px solid #4a148c; /* تمييز الباقة الاحترافية */
+    transform: scale(1.05);
+    background: #fdfaff;
+}
+
+.price-header { font-size: 2rem; font-weight: bold; color: #4a148c; margin-bottom: 20px; }
+.price-value { font-size: 2.5rem; font-weight: 900; color: #1e3a8a; margin-bottom: 30px; }
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: right; /* عشان تكون لغة عربية صح */
+}
+
+.price-card li {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+.price-card li i { color: #10b981; margin-left: 10px; } /* أيقونة الصح باللون الأخضر */
+
+.btn-price {
+    display: block;
+    padding: 20px;
+    background: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-price:hover { background: #4a148c; }
 header {
     /* تدرج لوني بأربعة ألوان ليعطي حركة غنية */
     background: linear-gradient(-45deg, #2c3e50, #4ca1af, #2c3e50, #00d2ff);
