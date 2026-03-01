@@ -1,312 +1,99 @@
-.pricing-section {
-    padding: 100px 20px;
-    background-color: #f1f5f9;
-}
-
-.pricing-section h2 { font-size: 3.5rem; color: #1e3a8a; margin-bottom: 20px; }
-.pricing-section p { font-size: 1.8rem; margin-bottom: 60px; color: #64748b; }
-
-.pricing-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.price-card {
-    background: white;
-    padding: 50px 40px;
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    width: 350px;
-    transition: transform 0.3s;
-    border: 2px solid #e2e8f0;
-}
-
-.price-card.featured {
-    border: 4px solid #4a148c; /* تمييز الباقة الاحترافية */
-    transform: scale(1.05);
-    background: #fdfaff;
-}
-
-.price-header { font-size: 2rem; font-weight: bold; color: #4a148c; margin-bottom: 20px; }
-.price-value { font-size: 2.5rem; font-weight: 900; color: #1e3a8a; margin-bottom: 30px; }
-
-.price-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 40px;
-    text-align: right; /* عشان تكون لغة عربية صح */
-}
-
-.price-card li {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #475569;
-}
-
-.price-card li i { color: #10b981; margin-left: 10px; } /* أيقونة الصح باللون الأخضر */
-
-.btn-price {
-    display: block;
-    padding: 20px;
-    background: #1e3a8a;
-    color: white;
-    text-decoration: none;
-    border-radius: 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn-price:hover { background: #4a148c; }
-header {
-    /* تدرج لوني بأربعة ألوان ليعطي حركة غنية */
-    background: linear-gradient(-45deg, #2c3e50, #4ca1af, #2c3e50, #00d2ff);
-    background-size: 400% 400%; /* تكبير الخلفية لتسمح بالحركة */
-    animation: gradientBG 10s ease infinite; /* تشغيل الأنميشن للأبد */
-    color: white;
-    padding: 80px 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* كود حركة الألوان */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-.contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.contact-form h2 { color: #2c3e50; margin-bottom: 10px; }
-
-.form-group { margin-bottom: 15px; }
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-family: inherit;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #4ca1af;
-}
-
-.btn-submit {
-    background: #2c3e50;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    transition: background 0.3s;
-}
-
-.btn-submit:hover {
-    background: #4ca1af;
-}
-.faq {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: right; /* لتناسب اللغة العربية */
-}
-
-.faq-item {
-    background: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-right: 5px solid #4ca1af; /* خط جانبي يعطي شكل مميز */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.faq-item h4 { color: #2c3e50; margin-top: 0; }
-/* تكبير الخط العام في الصفحة */
-body {
-    font-size: 20px; /* كبرنا الخط الأساسي من 16 لـ 20 */
-    line-height: 1.6; /* مسافة مريحة بين السطور */
-}
-
-/* تكبير العناوين الرئيسية */
-header h1 {
-    font-size: 2.5rem; /* خط كبير جداً وواضح */
-    margin-bottom: 15px;
-}
-
-header p {
-    font-size: 1.4rem; /* وصف العنوان يكون واضح */
-}
-
-/* تكبير عناوين الكروت والنصوص جواها */
-.card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-.card p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* تكبير خط الأزرار */
-.btn, .btn-submit {
-    font-size: 1.2rem;
-    padding: 15px 35px; /* كبرنا مساحة الزرار عشان يتشاف ويتحس */
-}
-
-/* تكبير نصوص الفورم (التواصل) */
-.contact-form input, 
-.contact-form textarea {
-    font-size: 1.2rem;
-    padding: 15px;
-}
-
-/* تكبير نصوص الأسئلة الشائعة */
-.faq-item h4 {
-    font-size: 1.4rem;
-}
-
-.faq-item p {
-    font-size: 1.2rem;
-}
-
-/* تكبير الفوتر */
-footer p {
-    font-size: 1.1rem;
-}
-/* تنسيقات عامة لراحة العين وأصحاب النظارات */
+/* 1. التنسيقات العامة (الأساس) */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9fafb;
     margin: 0;
     padding: 0;
     color: #1a1a1a;
-    line-height: 1.8; /* مسافة كبيرة بين السطور للراحة */
+    line-height: 1.8;
     text-align: center;
 }
 
-/* البانر الكبير (Hero Section) */
+/* 2. البانر الرئيسي (الهيرو) */
 .hero-section {
-    background: linear-gradient(135deg, #1e3a8a, #4a148c);
+    background: linear-gradient(-45deg, #1e3a8a, #4a148c, #2c3e50, #00d2ff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: white;
-    padding: 150px 20px; /* مسافة داخلية كبيرة لتملأ الشاشة */
-    min-height: 80vh; /* يجعل البانر يأخذ 80% من طول الشاشة */
+    padding: 120px 20px;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.hero-section h1 {
-    font-size: 4.5rem; /* خط ضخم جداً للعنوان الرئيسي */
-    font-weight: 900;
-    margin-bottom: 30px;
-    letter-spacing: -1px;
-    max-width: 1000px;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.hero-section p {
-    font-size: 2rem; /* وصف كبير جداً وواضح */
-    max-width: 850px;
-    margin: 0 auto 50px;
-    opacity: 0.95;
-}
+.hero-section h1 { font-size: 4rem; font-weight: 900; margin-bottom: 20px; }
+.hero-section p { font-size: 1.8rem; max-width: 800px; margin-bottom: 40px; }
 
-/* الأزرار الضخمة */
+/* 3. الأزرار */
 .hero-btns a {
     display: inline-block;
-    padding: 25px 60px; /* زر كبير جداً سهل الضغط */
+    padding: 20px 50px;
     border-radius: 50px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    margin: 10px;
 }
-
 .btn-primary { background: #00e5ff; color: #1e3a8a; }
 .btn-secondary { background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white; }
 
-/* قسم العمل الواحد (كبير ومالي الصفحة) */
-.work-section {
-    padding: 100px 20px;
-}
-
+/* 4. قسم العمل الواحد (المعرض) */
+.work-section { padding: 80px 20px; }
 .single-work {
-    max-width: 1100px; /* عرض كبير للكارت */
+    max-width: 1000px;
     margin: 0 auto;
     background: white;
-    border-radius: 30px;
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
+.single-work img { width: 100%; height: auto; max-height: 500px; object-fit: cover; }
+.info { padding: 40px; }
+.info h3 { font-size: 2.5rem; margin-bottom: 15px; }
+.info p { font-size: 1.5rem; color: #444; }
 
-.single-work img {
-    width: 100%;
-    height: auto;
-    max-height: 600px; /* صورة ضخمة وواضحة */
-    object-fit: cover;
-}
+/* 5. باقات الأسعار */
+.pricing-section { padding: 80px 20px; background-color: #f1f5f9; }
+.pricing-section h2 { font-size: 3rem; color: #1e3a8a; }
+.pricing-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+.price-card { background: white; padding: 40px; border-radius: 20px; width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.price-card.featured { border: 3px solid #4a148c; transform: scale(1.05); }
+.price-header { font-size: 1.8rem; font-weight: bold; color: #4a148c; }
+.price-value { font-size: 2.2rem; font-weight: 900; margin: 20px 0; }
+.btn-price { display: block; padding: 15px; background: #1e3a8a; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; }
 
-.info {
-    padding: 60px; /* مسافات واسعة داخل الكارت */
-}
-
-.info h3 {
-    font-size: 3rem; /* عنوان المشروع كبير جداً */
-    margin-bottom: 20px;
-}
-
-.info p {
-    font-size: 1.8rem; /* شرح المشروع واضح جداً */
-    color: #444;
-}
-
-/* لمسة الموبايل (عشان الكلام ميبقاش خارج الشاشة) */
-@media (max-width: 768px) {
-    .hero-section h1 { font-size: 2.8rem; }
-    .hero-section p { font-size: 1.5rem; }
-    .hero-btns a { padding: 20px 40px; font-size: 1.4rem; }
-    .info h3 { font-size: 2rem; }
-    .info p { font-size: 1.4rem; }
-}
-.contact-info {
-    padding: 80px 20px;
-    background-color: #f0f4f8;
-}
-
-.contact-info h2 { font-size: 3rem; color: #1e3a8a; }
-
+/* 6. الإيميل اللي "بيشد عربية" (المعدل) */
+.contact-info { padding: 80px 20px; background-color: #fff; border-top: 5px solid #1e3a8a; }
 .email-link {
     display: inline-block;
-    font-size: 2.5rem; /* خط ضخم للإيميل */
+    font-size: 2.8rem;
     color: #4a148c;
     text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    border-bottom: 4px solid #00e5ff;
+    font-weight: 800;
+    padding: 15px 40px;
+    border: 4px solid #4a148c;
+    border-radius: 15px;
     transition: all 0.3s ease;
 }
+.email-link:hover { background: #4a148c; color: #fff; transform: translateY(-5px); }
 
-.email-link:hover {
-    color: #00e5ff;
-    transform: scale(1.1);
+/* 7. الفوتر */
+footer { padding: 40px; background: #2c3e50; color: white; }
+.social-icon { color: white; font-size: 2rem; margin: 0 15px; transition: 0.3s; }
+.social-icon:hover { color: #00e5ff; }
+
+/* 8. الموبايل */
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 2.2rem; }
+    .email-link { font-size: 1.4rem; padding: 10px 20px; }
+    .price-card { width: 100%; }
 }
