@@ -98,3 +98,12 @@ footer { padding: 40px; background: #2c3e50; color: white; }
     .email-link { font-size: 1.4rem; padding: 10px 20px; }
     .price-card { width: 100%; }
 }
+<script>
+  window.onload = function() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  };
+</script>
