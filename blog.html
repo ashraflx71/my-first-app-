@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة أشرف التقنية | مقالات في تطوير الويب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-header { padding: 100px 20px; background: #1e3a8a; color: white; text-align: center; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .post-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; }
+        .post-card:hover { transform: translateY(-5px); }
+        .post-content { padding: 20px; }
+        .post-category { color: #e63946; font-size: 0.8rem; font-weight: bold; }
+        .post-title { color: #1e3a8a; margin: 10px 0; }
+        .back-home { display: inline-block; margin-top: 20px; color: white; text-decoration: none; border: 1px solid white; padding: 10px 20px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <header class="blog-header">
+        <h1>مدونة أشرف التقنية 💡</h1>
+        <p>دروس، نصائح، وأسرار عالم البرمجة والربح من الإنترنت</p>
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+    </header>
+
+    <main class="blog-grid">
+        <article class="post-card">
+            <div style="height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 4rem;">💻</div>
+            <div class="post-content">
+                <span class="post-category">تعليمي</span>
+                <h3 class="post-title">كيف تبدأ في برمجة المواقع؟</h3>
+                <p>دليلك الشامل لتعلم الـ HTML و CSS من الصفر حتى الاحتراف...</p>
+                <a href="#" class="btn-preview" style="margin-top: 15px; text-align: center; display: block;">اقرأ المقال</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div style="height: 200px; background: #e0f2fe; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🚀</div>
+            <div class="post-content">
+                <span class="post-category">أداء</span>
+                <h3 class="post-title">أسرار سرعة المواقع</h3>
+                <p>تعلم كيف تجعل موقعك يفتح في أقل من ثانية لتحسين ترتيبك في جوجل...</p>
+                <a href="#" class="btn-preview" style="margin-top: 15px; text-align: center; display: block;">اقرأ المقال</a>
+            </div>
+        </article>
+
+        </main>
+
+    <footer style="text-align: center; padding: 40px; background: #f8fafc;">
+        <p>حقوق النشر © 2026 | مدونة أشرف حسن</p>
+    </footer>
+
+</body>
+</html>
