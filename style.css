@@ -202,3 +202,54 @@ footer { padding: 40px; text-align: center; background: #111; color: white; }
     padding: 3px 10px;
     border-radius: 20px;
 }
+.tech-article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    direction: rtl; /* للتنسيق العربي */
+    line-height: 1.8;
+}
+
+.article-header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.category-tag {
+    background: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.article-image img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.article-content h3 {
+    color: #007bff;
+    margin-top: 25px;
+}
+
+.ad-placeholder {
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.btn-contact {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
