@@ -1,5 +1,11 @@
 /* الإعدادات العامة */
-* {
+* {* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif; /* قمت بتغييرها هنا */
+}
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
