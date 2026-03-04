@@ -83,7 +83,7 @@ body {
                     <label>الاسم بالكامل</label>
                     <input type="text" id="userName" placeholder="اكتب اسمك هنا..." required>
                 </div>
-                
+                style.css
                 <div class="input-group">
                     <label>نوع المشروع</label>
                     <select id="projectType">
