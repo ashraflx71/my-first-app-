@@ -4,6 +4,13 @@
     --dark: #0f172a;
     --light: #f8fafc;
 }
+<ul class="nav-links">
+    <li><a href="#home">الرئيسية</a></li>
+    <li><a href="#about">من أنا</a></li>
+    <li><a href="#portfolio">أعمالي</a></li>
+    <li><a href="#blog">المدونة</a></li>
+    <li><a href="#contact">تواصل معي</a></li>
+</ul>
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
