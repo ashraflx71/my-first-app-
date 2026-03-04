@@ -110,3 +110,23 @@ body {
 footer { text-align: center; padding: 40px; background: var(--dark); color: #fff; }
 .socials { margin-top: 15px; font-size: 1.5rem; }
 .socials a { color: #fff; margin: 0 10px; }
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // جلب البيانات من النموذج
+    const name = document.getElementById('userName').value;
+    const type = document.getElementById('projectType').value;
+    const message = document.getElementById('userMessage').value;
+    
+    // رقم الهاتف الجديد الخاص بك
+    const myNumber = "201280208018"; 
+
+    // تنسيق نص الرسالة ليظهر بشكل احترافي في واتساب
+    const text = `مرحباً أشرف،%0Aأنا: ${name}%0Aبخصوص: ${type}%0Aالرسالة: ${message}`;
+    
+    // فتح رابط واتساب في نافذة جديدة
+    const whatsappUrl = `https://wa.me/${myNumber}?text=${text}`;
+    window.open(whatsappUrl, '_blank');
+});
+</script>
