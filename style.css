@@ -320,7 +320,20 @@ footer { padding: 40px; text-align: center; background: #111; color: white; }
     text-align: center;
     border-radius: 20px;
     margin-top: 50px;
+}style>/* هذا الكود يجعل زر الحذف يظهر بشكل جميل بجانب المهمة */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff7675;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
 }
+.delete-btn:hover {
+    color: #d63031;
+    transform: scale(1.2);
+}
+
 
 .btn-main {
     background: #007bff;
