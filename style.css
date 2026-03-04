@@ -1,24 +1,18 @@
-/* الإعدادات العامة */
-* {* {
+/* 1. الإعدادات العامة - تم تنظيف التكرار */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif; /* قمت بتغييرها هنا */
-}
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
 }
 
 body {
-    background-color: #fff;
+    background-color: #f4f7f6; /* خلفية أهدأ قليلاً */
     color: #333;
     line-height: 1.6;
 }
 
-/* قسم الهيرو */
+/* 2. قسم الهيرو (الواجهة الرئيسية) */
 .hero-section {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
@@ -26,301 +20,43 @@ body {
     text-align: center;
 }
 
-.badge {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
 .hero-content h1 {
     font-size: 3rem;
     margin: 20px 0;
 }
 
-.hero-btns {
-    margin-top: 30px;
-}
-
-.btn-primary, .btn-secondary, .btn-preview {
+/* 3. الأزرار - قمت بدمج تنسيقاتك الجديدة هنا */
+.btn-primary, .btn-main {
+    background: #f59e0b;
+    color: white;
     padding: 12px 25px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
     transition: 0.3s;
+    border: none;
     cursor: pointer;
 }
 
-.btn-primary { background: #f59e0b; color: white; border: none; }
-.btn-primary:hover { background: #d97706; }
-
-.btn-secondary { border: 2px solid white; color: white; margin-right: 10px; }
-.btn-secondary:hover { background: white; color: #1e3a8a; }
-
-/* متجر القوالب */
-.templates-store { padding: 80px 20px; background: #f8fafc; text-align: center; }
-.templates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 40px auto;
+.btn-secondary, .btn-sub {
+    border: 2px solid white;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    transition: 0.3s;
 }
 
-.template-card {
+.btn-secondary:hover, .btn-sub:hover {
     background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    color: #1e3a8a;
 }
 
-.template-card:hover { transform: translateY(-10px); }
-.template-icon { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-.restaurant-bg { background: #e63946; color: white; }
-.service-bg { background: #f59e0b; color: white; }
-
-.template-info { padding: 20px; text-align: center; }
-.template-price { font-weight: bold; color: #10b981; font-size: 1.2rem; margin: 15px 0; }
-.btn-preview { background: #1e3a8a; color: white; width: 100%; }
-
-/* سلايدر الآراء */
-.testimonials-section { padding: 60px 20px; background: #1e3a8a; color: white; text-align: center; }
-.testimonial-slider { position: relative; max-width: 600px; margin: 0 auto; min-height: 180px; }
-.testimonial-card { display: none; padding: 20px; animation: fade 0.8s; }
-.testimonial-card.active { display: block; }
-
-@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
-
-.slider-dots { margin-top: 15px; }
-.dot { height: 10px; width: 10px; margin: 0 5px; background: rgba(255,255,255,0.3); border-radius: 50%; display: inline-block; cursor: pointer; }
-.dot.active { background: white; width: 25px; border-radius: 10px; }
-
-/* قسم الأسعار */
-.pricing-section { padding: 80px 20px; text-align: center; }
-.pricing-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px; }
-.price-card { padding: 40px; border: 1px solid #ddd; border-radius: 20px; width: 280px; }
-.price-card.featured { border: 2px solid #1e3a8a; position: relative; background: #f0f7ff; }
-.btn-price { display: block; margin-top: 20px; padding: 10px; background: #1e3a8a; color: white; border-radius: 8px; text-decoration: none; }
-
-/* التذييل */
-footer { padding: 40px; text-align: center; background: #111; color: white; }
-.social-icon { color: white; font-size: 1.5rem; margin: 0 10px; }
-
-/* استجابة الموبايل */
-@media (max-width: 768px) {
-    .hero-content h1 { font-size: 2rem; }
-    .btn-secondary { margin-top: 10px; margin-right: 0; }
-}
-/* تنسيقات عامة للقسم */
-.portfolio-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    direction: rtl; /* للغة العربية */
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.section-subtitle {
-    color: #777;
-    margin-bottom: 40px;
-}
-
-/* شبكة المشاريع */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* بطاقة المشروع */
-.project-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.placeholder-bg {
-    width: 100%;
-    height: 200px;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-weight: bold;
-}
-
-.project-info {
-    padding: 20px;
-}
-
-.project-info h3 {
-    margin-top: 0;
-    color: #2c3e50;
-}
-
-.project-info p {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.6;
-}
-
-.btn-view {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn-view:hover {
-    background-color: #2980b9;
-}
-
-.status-badge {
-    font-size: 0.8rem;
-    background: #e74c3c;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 20px;
-}
-.tech-article {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    direction: rtl; /* للتنسيق العربي */
-    line-height: 1.8;
-}
-
-.article-header h1 {
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.category-tag {
-    background: #007bff;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
-
-.article-image img {
-    width: 100%;
-    border-radius: 15px;
-    margin: 20px 0;
-}
-
-.article-content h3 {
-    color: #007bff;
-    margin-top: 25px;
-}
-
-.ad-placeholder {
-    background: #f9f9f9;
-    border: 2px dashed #ddd;
-    text-align: center;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-.btn-contact {
-    display: inline-block;
-    background: #28a745;
-    color: white;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-.epic-article {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    font-family: 'Cairo', sans-serif;
-    color: #333;
-    line-height: 1.9;
-    background: #fdfdfd;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.trending-badge {
-    display: inline-block;
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.epic-header h1 {
-    font-size: 2.5rem;
-    color: #1a1a1a;
-    line-height: 1.3;
-}
-
-.drop-cap {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #007bff;
-}
-
-.highlight-box {
-    background: #e7f3ff;
-    border-right: 5px solid #007bff;
-    padding: 20px;
-    margin: 30px 0;
-    border-radius: 0 10px 10px 0;
-}
-
-.ad-spot-premium {
-    height: 150px;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed #bbb;
-    margin: 30px 0;
-    color: #888;
-}
-
-.call-to-action-premium {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 40px;
-    text-align: center;
-    border-radius: 20px;
-    margin-top: 50px;
-}style>/* هذا الكود يجعل زر الحذف يظهر بشكل جميل بجانب المهمة */
+/* 4. كود زر الحذف (الذي طلبته سابقاً) */
 .delete-btn {
     background: none;
     border: none;
@@ -329,29 +65,35 @@ footer { padding: 40px; text-align: center; background: #111; color: white; }
     font-size: 1.1rem;
     transition: 0.3s;
 }
+
 .delete-btn:hover {
     color: #d63031;
     transform: scale(1.2);
 }
 
-
-.btn-main {
-    background: #007bff;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin: 10px;
-    display: inline-block;
+/* 5. متجر القوالب (Templates) */
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-.btn-sub {
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin: 10px;
-    display: inline-block;
+.template-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
 
+.template-card:hover { transform: translateY(-10px); }
 
+/* 6. استجابة الشاشات (Responsive) */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2rem; }
+    .btn-secondary, .btn-sub { margin-top: 10px; margin-right: 0; }
+}
