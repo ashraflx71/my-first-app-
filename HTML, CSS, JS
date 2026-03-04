@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيقي الاحترافي | My Pro App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --bg: #0f0c29;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-container {
+            width: 90%;
+            max-width: 1000px;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--glass);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .welcome-msg h1 { margin: 0; font-size: 1.8rem; color: var(--secondary); }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) { .main-content { grid-template-columns: 1fr; } }
+
+        /* Card Style */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Task List */
+        .task-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            outline: none;
+        }
+
+        button.add-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover { background: var(--secondary); }
+
+        ul { list-style: none; padding: 0; }
+        li {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .status-badge {
+            background: #00b894;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <div class="welcome-msg">
+            <h1 id="greeting">مرحباً بك!</h1>
+            <p>إليك نظرة سريعة على إنتاجيتك اليوم.</p>
+        </div>
+        <div class="date-time" id="clock">00:00:00</div>
+    </header>
+
+    <div class="main-content">
+        <div class="card">
+            <h3><i class="fas fa-chart-line"></i> الإحصائيات</h3>
+            <p>المهام المكتملة: <strong id="count">0</strong></p>
+            <div style="height: 10px; background: #333; border-radius: 5px; overflow: hidden;">
+                <div id="progress" style="width: 0%; height: 100%; background: var(--primary); transition: 0.5s;"></div>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 10px;">استمر في التقدم، أنت تبلي بلاءً حسناً!</p>
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-tasks"></i> مهام المشروع القادم</h3>
+            <div class="task-input">
+                <input type="text" id="taskInput" placeholder="ما هي الخطوة التالية؟">
+                <button class="add-btn" onclick="addTask()">إضافة</button>
+            </div>
+            <ul id="taskList">
+                </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    // تحديث الساعة والترحيب
+    function updateHeader() {
+        const now = new Date();
+        const hours = now.getHours();
+        const clock = document.getElementById('clock');
+        const greeting = document.getElementById('greeting');
+
+        clock.innerText = now.toLocaleTimeString('ar-EG');
+
+        if (hours < 12) greeting.innerText = "صباح الخير، أيها المبدع! ☀️";
+        else if (hours < 18) greeting.innerText = "طاب يومك، يا بطل! ☕";
+        else greeting.innerText = "مساء الإبداع، يا محترف! 🌙";
+    }
+
+    setInterval(updateHeader, 1000);
+    updateHeader();
+
+    // نظام المهام
+    let tasksCount = 0;
+    function addTask() {
+        const input = document.getElementById('taskInput');
+        const val = input.value;
+        if (val === '') return;
+
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${val}</span> <span class="status-badge">نشط</span>`;
+        document.getElementById('taskList').appendChild(li);
+        
+        input.value = '';
+        tasksCount++;
+        document.getElementById('count').innerText = tasksCount;
+        document.getElementById('progress').style.width = (tasksCount * 10) + '%'; // تجريبي
+    }
+</script>
+
+</body>
+</html>
