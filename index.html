@@ -81,7 +81,30 @@
             <a href="https://wa.me/201380308018"><i class="fab fa-whatsapp"></i></a>
             <a href="mailto:ashraflx71@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
+   
+    <script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // جلب البيانات من النموذج
+    const name = document.getElementById('userName').value;
+    const type = document.getElementById('projectType').value;
+    const message = document.getElementById('userMessage').value;
+    
+    // رقم الهاتف الجديد الخاص بك
+    const myNumber = "201280208018"; 
+
+    // تنسيق نص الرسالة ليظهر بشكل احترافي في واتساب
+    const text = `مرحباً أشرف،%0Aأنا: ${name}%0Aبخصوص: ${type}%0Aالرسالة: ${message}`;
+    
+    // فتح رابط واتساب في نافذة جديدة
+    const whatsappUrl = `https://wa.me/${myNumber}?text=${text}`;
+    window.open(whatsappUrl, '_blank');
+});
+</script>
+
     </footer>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
