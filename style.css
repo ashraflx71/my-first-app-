@@ -63,7 +63,26 @@ input:focus, textarea:focus { border-color: var(--primary); }
 
 footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--glass-border); margin-top: 100px; color: #64748b; }
 
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero-title { font-size: 2.5rem; }
+
+}@media (max-width: 768px) {
+    /* جعل القائمة تظهر بشكل أفقي بسيط أسفل اللوجو في الموبايل */
+    .nav-links {
+        display: flex !important; /* إجبارها على الظهور */
+        gap: 10px;
+        font-size: 12px;
+    }
+    
+    .nav-container {
+        flex-direction: column; /* وضع اللوجو فوق الروابط لضمان المساحة */
+        gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem; /* تصغير العنوان قليلاً ليناسب الشاشة */
+    }
+
+    .btn-nav {
+        padding: 5px 12px;
+    }
 }
+
