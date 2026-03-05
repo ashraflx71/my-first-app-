@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أشرف حسن | مبرمج واجهات واحترافي سيو</title>
-    
+    <meta name="description" content="أشرف حسن - مطور واجهات UI/UX وخبير سيو متخصص في بناء المواقع السريعة">
+    <title>أشرف حسن | Ashraf Dev 2026</title>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G25701MZQ8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,10 +16,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 <body>
     <div class="bg-blur"></div>
+
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">ASHRAF<span>.DEV</span></div>
@@ -27,36 +29,87 @@
                 <li><a href="#services">خدماتي</a></li>
                 <li><a href="#portfolio">أعمالي</a></li>
                 <li><a href="blog.html">المدونة</a></li>
+                <li><a href="#contact" class="btn-nav">تواصل معي</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="container">
-            <h1 class="hero-title">نصمم المستقبل <br><span class="text-gradient">بأكواد احترافية</span></h1>
-            <p class="hero-desc">أهلاً بك في موقع أشرف حسن - مبرمج واجهات المستخدم وخبير تحسين محركات البحث.</p>
+            <span class="badge">متاح للمشاريع الجديدة 2026</span>
+            <h1 class="hero-title">نصمم تجربة <br><span class="text-gradient">رقمية استثنائية</span></h1>
+            <p class="hero-desc">حول رؤيتك إلى واقع مع حلول برمجية متطورة وتحسين محركات البحث لضمان النمو.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-main">ابدأ مشروعك الآن</a>
+                <a href="#portfolio" class="btn-secondary">مشاهدة الأعمال</a>
+            </div>
         </div>
     </header>
 
     <section id="services" class="services">
         <div class="container">
+            <h2 class="section-title">لماذا تختار خبرتي؟</h2>
             <div class="services-grid">
                 <div class="glass-card">
-                    <i class="fas fa-code"></i>
-                    <h3>تطوير المواقع</h3>
-                    <p>بناء مواقع سريعة ومتجاوبة مع كافة الشاشات.</p>
+                    <div class="icon-circle"><i class="fas fa-rocket"></i></div>
+                    <h3>أداء صاروخي</h3>
+                    <p>مواقع فائقة السرعة تضمن بقاء الزائر وتحسين ترتيبك في جوجل.</p>
                 </div>
                 <div class="glass-card">
-                    <i class="fas fa-search-dollar"></i>
-                    <h3>تحسين السيو</h3>
-                    <p>نساعدك للظهور في الصفحة الأولى من نتائج بحث جوجل.</p>
+                    <div class="icon-circle"><i class="fas fa-search-location"></i></div>
+                    <h3>SEO متقدم</h3>
+                    <p>استراتيجيات حديثة لتصدر نتائج البحث وجلب عملاء حقيقيين.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="icon-circle"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>تصميم متجاوب</h3>
+                    <p>تجربة مستخدم مثالية على كافة الهواتف والشاشات الذكية.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">معرض الإبداع</h2>
+            <div class="projects-grid">
+                <div class="glass-card project-card">
+                    <div class="project-img"></div>
+                    <h3>منصة تحليل البيانات 2026</h3>
+                    <a href="#" class="view-link">معاينة النظام</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-card glass-card">
+                <h2>استشارة تقنية مجانية</h2>
+                <p>أخبرني عن فكرتك وسأقوم بتحويلها إلى خطة عمل برمجية.</p>
+                <form id="whatsappForm">
+                    <input type="text" id="userName" placeholder="اسمك الكريم" required>
+                    <textarea id="userMessage" rows="4" placeholder="تفاصيل مشروعك الحلم..." required></textarea>
+                    <button type="submit" class="btn-submit">إرسال عبر واتساب <i class="fab fa-whatsapp"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2026 جميع الحقوق محفوظة | أشرف حسن</p>
+        <div class="container">
+            <p>© 2026 جميع الحقوق محفوظة | تم التطوير بشغف بواسطة <span class="text-gradient">أشرف حسن</span></p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('userName').value;
+            const msg = document.getElementById('userMessage').value;
+            const text = `مرحباً أشرف، أنا ${name}. أرغب في استشارة بخصوص: ${msg}`;
+            window.open(`https://wa.me/201280208018?text=${encodeURIComponent(text)}`, '_blank');
+        });
+    </script>
 </body>
 </html>
