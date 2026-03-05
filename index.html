@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أشرف حسن | مطور واجهات احترافي</title>
+    <title>أشرف حسن | مطور واجهات محترف</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,15 +15,16 @@
             <li><a href="#home">الرئيسية</a></li>
             <li><a href="#about">من أنا</a></li>
             <li><a href="#portfolio">أعمالي</a></li>
+            <li><a href="#blog">المدونة</a></li>
             <li><a href="#contact">تواصل معي</a></li>
         </ul>
     </nav>
 
     <header id="home" class="hero">
         <div class="hero-content">
-            <h1>أهلاً بك، أنا <span class="text-gradient">أشرف حسن</span></h1>
-            <p>أصمم وأطور واجهات مستخدم عصرية واحترافية.</p>
-            <a href="#contact" class="btn-primary">اطلب مشروعك الآن</a>
+            <h1>مرحباً، أنا <span class="text-gradient">أشرف حسن</span></h1>
+            <p>خبير في بناء المواقع العصرية وتطوير واجهات المستخدم.</p>
+            <a href="#contact" class="btn-primary">ابدأ مشروعك الآن</a>
         </div>
     </header>
 
@@ -31,16 +32,13 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80" alt="أشرف حسن">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="أشرف حسن">
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">من أنا؟</h2>
-                    <p>أنا مطور واجهات مستخدم شغوف بتحويل الأفكار إلى واقع رقمي. أركز على بناء مواقع سريعة، متجاوبة مع جميع الشاشات، وصديقة لمحركات البحث.</p>
-                    <div class="skills">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Responsive Design</span>
+                    <p>أنا مطور واجهات مستخدم (Frontend Developer) أجمع بين التصميم الإبداعي والكود النظيف. هدفي هو مساعدة الشركات والأفراد على الظهور بأفضل صورة رقمية ممكنة.</p>
+                    <div class="skills-tags">
+                        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>Responsive Design</span>
                     </div>
                 </div>
             </div>
@@ -55,14 +53,29 @@
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="مشروع">
                     <div class="project-info">
                         <h3>منصة تحليل بيانات</h3>
-                        <a href="https://ashraflx71.github.io/my-first-app-/" target="_blank" class="btn-link">معاينة حية</a>
+                        <a href="https://ashraflx71.github.io/my-first-app-/" target="_blank" class="btn-link">معاينة العمل</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=500" alt="متجر">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=500" alt="مشروع">
                     <div class="project-info">
-                        <h3>متجر إلكتروني عصري</h3>
-                        <span class="status">قريباً..</span>
+                        <h3>متجر إلكتروني</h3>
+                        <p>قيد التطوير...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title">المدونة التقنية</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>مستقبل الويب في 2026</h3>
+                        <p>تعرف على أحدث التقنيات التي ستغير عالم البرمجة...</p>
+                        <a href="javascript:void(0)" onclick="alert('سيتم إضافة المقال كاملاً قريباً!')" class="read-more">اقرأ المزيد</a>
                     </div>
                 </div>
             </div>
@@ -71,34 +84,32 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">تواصل معي عبر واتساب 💬</h2>
+            <h2 class="section-title">تواصل معي 💬</h2>
             <div class="contact-card">
                 <form id="whatsappForm">
                     <div class="input-group">
                         <label>الاسم</label>
-                        <input type="text" id="userName" placeholder="اكتب اسمك هنا" required>
+                        <input type="text" id="userName" required placeholder="اكتب اسمك">
                     </div>
                     <div class="input-group">
-                        <label>نوع المشروع</label>
+                        <label>نوع الخدمة</label>
                         <select id="projectType">
-                            <option value="موقع تعريفي">موقع تعريفي</option>
-                            <option value="متجر إلكتروني">متجر إلكتروني</option>
+                            <option value="برمجة موقع">برمجة موقع جديد</option>
+                            <option value="تعديل موقع">تعديل موقع حالي</option>
                         </select>
                     </div>
                     <div class="input-group">
                         <label>رسالتك</label>
-                        <textarea id="userMessage" placeholder="اشرح طلبك باختصار" required></textarea>
+                        <textarea id="userMessage" required placeholder="كيف يمكنني مساعدتك؟"></textarea>
                     </div>
-                    <button type="submit" class="btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> إرسال للواتساب
-                    </button>
+                    <button type="submit" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> إرسال عبر واتساب</button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>جميع الحقوق محفوظة © 2026 | أشرف حسن</p>
+        <p>جميع الحقوق محفوظة © 2026 | تطوير أشرف حسن</p>
     </footer>
 
     <script>
@@ -106,10 +117,10 @@
             e.preventDefault();
             const name = document.getElementById('userName').value;
             const type = document.getElementById('projectType').value;
-            const message = document.getElementById('userMessage').value;
-            const myNumber = "201280208018"; 
-            const text = `مرحباً أشرف، أنا ${name}. بخصوص ${type}: ${message}`;
-            window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(text)}`, '_blank');
+            const msg = document.getElementById('userMessage').value;
+            const phone = "201280208018";
+            const fullText = `الاسم: ${name}%0Aالطلب: ${type}%0Aالرسالة: ${msg}`;
+            window.open(`https://wa.me/${phone}?text=${fullText}`, '_blank');
         });
     </script>
 </body>
