@@ -15,7 +15,6 @@
             <li><a href="#home">الرئيسية</a></li>
             <li><a href="#about">من أنا</a></li>
             <li><a href="#portfolio">أعمالي</a></li>
-            <li><a href="#blog">المدونة</a></li>
             <li><a href="#contact">تواصل معي</a></li>
         </ul>
     </nav>
@@ -30,64 +29,43 @@
 
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">من أنا؟</h2>
-            <p>مطور واجهات مستخدم شغوف ببناء مواقع سريعة ومتجاوبة باستخدام أحدث التقنيات.</p>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80" alt="أشرف حسن">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">من أنا؟</h2>
+                    <p>أنا مطور واجهات مستخدم شغوف بتحويل الأفكار إلى واقع رقمي. أركز على بناء مواقع سريعة، متجاوبة مع جميع الشاشات، وصديقة لمحركات البحث.</p>
+                    <div class="skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <section id="portfolio" class="portfolio">
-    <div class="container">
-        <h2 class="section-title">أعمالي المختارة</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="UI/UX Design">
-                </div>
-                <div class="project-info">
-                    <h3>منصة تحليل بيانات</h3>
-                    <p>واجهة مستخدم ذكية تركز على تجربة المستخدم.</p>
-                    <a href="https://ashraflx71.github.io/my-first-app-/" class="btn-link" target="_blank">معاينة حية</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80" alt="E-commerce Project">
-                </div>
-                <div class="project-info">
-                    <h3>متجر أزياء عصري</h3>
-                    <p>تصميم متجر إلكتروني متكامل سريع ومتجاوب.</p>
-                    <a href="#" class="btn-link">قريباً..</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Mobile Landing Page">
-                </div>
-                <div class="project-info">
-                    <h3>تطبيق توصيل ذكي</h3>
-                    <p>صفحة هبوط احترافية جذابة لتطبيقات الجوال.</p>
-                    <a href="#" class="btn-link">قريباً..</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
+            <h2 class="section-title">أعمالي المختارة</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500" alt="مشروع">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="مشروع">
                     <div class="project-info">
-                        <h3>مشروع واجهة مستخدم</h3>
-                        <a href="https://ashraflx71.github.io/my-first-app-/" target="_blank">معاينة حية</a>
+                        <h3>منصة تحليل بيانات</h3>
+                        <a href="https://ashraflx71.github.io/my-first-app-/" target="_blank" class="btn-link">معاينة حية</a>
                     </div>
                 </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=500" alt="متجر">
+                    <div class="project-info">
+                        <h3>متجر إلكتروني عصري</h3>
+                        <span class="status">قريباً..</span>
+                    </div>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -98,7 +76,7 @@
                 <form id="whatsappForm">
                     <div class="input-group">
                         <label>الاسم</label>
-                        <input type="text" id="userName" required>
+                        <input type="text" id="userName" placeholder="اكتب اسمك هنا" required>
                     </div>
                     <div class="input-group">
                         <label>نوع المشروع</label>
@@ -109,9 +87,11 @@
                     </div>
                     <div class="input-group">
                         <label>رسالتك</label>
-                        <textarea id="userMessage" required></textarea>
+                        <textarea id="userMessage" placeholder="اشرح طلبك باختصار" required></textarea>
                     </div>
-                    <button type="submit" class="btn-whatsapp">إرسال للواتساب</button>
+                    <button type="submit" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> إرسال للواتساب
+                    </button>
                 </form>
             </div>
         </div>
