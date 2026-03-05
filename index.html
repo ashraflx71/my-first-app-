@@ -11,36 +11,77 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المدونة | أشرف حسن</title>
+    <title>أشرف حسن | مبرمج واجهات وخبير سيو</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="blog-page">
+<body>
+    <div class="bg-blur"></div>
     <nav class="navbar">
-        <div class="container">
-            <a href="index.html" style="color:white; text-decoration:none;"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+        <div class="container nav-container">
+            <div class="logo">ASHRAF<span>.DEV</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">خدماتي</a></li>
+                <li><a href="#portfolio">أعمالي</a></li>
+                <li><a href="#blog">المدونة</a></li>
+                <li><a href="#contact" class="btn-nav">اتصل بي الآن</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="hero" style="padding: 100px 0 50px;">
+    <header id="home" class="hero">
         <div class="container">
-            <h1 class="text-gradient">مدونة التكنولوجيا والأرباح</h1>
-            <p>مقالات حصرية لمساعدتك على النجاح في 2026</p>
+            <span class="badge-top">متاح للمشاريع الجديدة 2026</span>
+            <h1 class="hero-title">نصمم المستقبل <br><span class="text-gradient">بأكواد برمجية احترافية</span></h1>
+            <p class="hero-desc">خبير تطوير واجهات المستخدم (Frontend) وتحسين محركات البحث (SEO).</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-main">امتلك موقعك الآن</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="glass-card"><i class="fas fa-code icon-box"></i><h3>برمجة متكاملة</h3><p>أكواد نظيفة وسريعة.</p></div>
+                <div class="glass-card"><i class="fas fa-search-dollar icon-box"></i><h3>سيو SEO</h3><p>تصدر نتائج جوجل.</p></div>
+            </div>
         </div>
     </section>
 
-    <main class="container">
-        <article class="glass-card" style="margin-bottom: 30px;">
-            <h2>كيف تضاعف أرباحك من البرمجة والذكاء الاصطناعي 2026؟</h2>
-            <p style="color:#ccc; line-height:1.8;">الذكاء الاصطناعي ليس تهديداً، بل هو أقوى أداة في يد المبرمج الذكي. في هذه المقالة سنتحدث عن كيفية استخدام أدوات مثل Gemini و ChatGPT لتسريع عملية البرمجة بمقدار 10 أضعاف...</p>
-            <hr style="border:0; border-top:1px solid var(--glass-border); margin:20px 0;">
-            <p>قريباً.. سننشر تفاصيل أكثر حول أدوات الـ SEO الحديثة.</p>
-        </article>
-    </main>
+    <section id="blog" class="blog-preview">
+        <div class="container">
+            <div class="glass-card article-main">
+                <div class="article-content">
+                    <h2>مقالات حصرية 🔥</h2>
+                    <a href="blog.html" class="read-more">دخول المدونة <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer style="margin-top:50px;">
-        <p>© 2026 جميع الحقوق محفوظة | أشرف حسن</p>
-    </footer>
+    <section id="contact" class="contact-ultra">
+        <div class="container">
+            <div class="contact-box">
+                <h2>تواصل معي</h2>
+                <form id="whatsappForm">
+                    <input type="text" id="userName" placeholder="اسمك" required>
+                    <textarea id="userMessage" placeholder="رسالتك" required></textarea>
+                    <button type="submit" class="btn-submit">واتساب <i class="fab fa-whatsapp"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('userName').value;
+            const msg = document.getElementById('userMessage').value;
+            window.open(`https://wa.me/201280208018?text=أنا ${name}: ${msg}`, '_blank');
+        });
+    </script>
 </body>
 </html>
