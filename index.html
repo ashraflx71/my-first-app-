@@ -13,7 +13,7 @@
         <div class="logo">أشرف <span>حسن</span></div>
         <ul class="nav-links">
             <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#about">من أنا</a></li>
+            <li><a href="#services">خدماتي</a></li>
             <li><a href="#portfolio">أعمالي</a></li>
             <li><a href="#blog">المدونة</a></li>
             <li><a href="#contact">تواصل معي</a></li>
@@ -21,96 +21,107 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="hero-content">
+        <div class="container">
             <h1>مرحباً، أنا <span class="text-gradient">أشرف حسن</span></h1>
-            <p>أصمم وأطور واجهات مستخدم عصرية واحترافية.</p>
-            <a href="#contact" class="btn-primary">اطلب مشروعك الآن</a>
+            <p>خبير تطوير واجهات المستخدم وبناء الحلول الرقمية المبتكرة.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">ابدأ مشروعك</a>
+                <a href="#portfolio" class="btn-outline">مشاهدة أعمالي</a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="about-section">
+    <section id="services" class="services">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80" alt="أشرف حسن">
+            <h2 class="section-title">خدماتي الاحترافية</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>تطوير المواقع</h3>
+                    <p>بناء مواقع سريعة ومتجاوبة باستخدام أحدث التقنيات العالمية.</p>
                 </div>
-                <div class="about-text">
-                    <h2 class="section-title">من أنا؟</h2>
-                    <p>أنا مطور واجهات مستخدم شغوف بتحويل الأفكار إلى واقع رقمي مبهر. أركز على بناء مواقع سريعة ومتجاوبة مع كافة الشاشات.</p>
-                    <div class="skills-tags">
-                        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>Responsive Design</span>
-                    </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>تطبيقات الويب</h3>
+                    <p>تحويل فكرتك إلى تطبيق ويب يعمل بكفاءة على كافة الشاشات.</p>
                 </div>
+                <div class="service-card">
+                    <i class="fas fa-search"></i>
+                    <h3>تحسين SEO</h3>
+                    <p>تهيئة موقعك للظهور في النتائج الأولى لمحركات البحث.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><h3>+50</h3><p>مشروع منجز</p></div>
+                <div class="stat-item"><h3>+40</h3><p>عميل سعيد</p></div>
+                <div class="stat-item"><h3>+1000</h3><p>ساعة عمل</p></div>
             </div>
         </div>
     </section>
 
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">أعمالي المختارة</h2>
+            <h2 class="section-title">معرض الأعمال</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="مشروع">
                     <div class="project-info">
                         <h3>منصة تحليل بيانات</h3>
-                        <a href="https://ashraflx71.github.io/my-first-app-/" target="_blank" class="btn-link">معاينة حية</a>
+                        <a href="https://ashraflx71.github.io/my-first-app-/" target="_blank">معاينة</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=500" alt="متجر">
                     <div class="project-info">
-                        <h3>متجر إلكتروني عصري</h3>
-                        <p>قيد التطوير...</p>
+                        <h3>متجر إلكتروني ذكي</h3>
+                        <p>قريباً</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="blog" class="blog-section">
+    <section id="blog" class="blog">
         <div class="container">
             <h2 class="section-title">المدونة التقنية</h2>
             <div class="blog-grid">
                 <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500" alt="Blog">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="مقالة">
                     <div class="blog-info">
-                        <h3>مستقبل الويب 2026</h3>
-                        <p>تعرف على أحدث التقنيات في تطوير الواجهات...</p>
-                        <a href="javascript:void(0)" onclick="alert('قريباً سيتم نشر المقالات!')" class="read-more">اقرأ المزيد</a>
+                        <span class="date">5 مارس 2026</span>
+                        <h3>أهمية الذكاء الاصطناعي في البرمجة</h3>
+                        <p>كيف غير AI طريقة كتابة الكود وجعلها أسرع بـ 10 أضعاف...</p>
+                        <a href="javascript:void(0)" onclick="alert('المقالة ستتوفر بالكامل قريباً!')" class="read-more">اقرأ المقال</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">تواصل معي عبر واتساب 💬</h2>
+            <h2 class="section-title">لنعمل معاً 💬</h2>
             <div class="contact-card">
                 <form id="whatsappForm">
-                    <div class="input-group">
-                        <label>الاسم</label>
-                        <input type="text" id="userName" required placeholder="اكتب اسمك">
-                    </div>
-                    <div class="input-group">
-                        <label>نوع الخدمة</label>
-                        <select id="projectType">
-                            <option value="برمجة موقع">برمجة موقع جديد</option>
-                            <option value="تعديل موقع">تعديل موقع حالي</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>رسالتك</label>
-                        <textarea id="userMessage" required placeholder="اشرح طلبك باختصار"></textarea>
-                    </div>
-                    <button type="submit" class="btn-whatsapp">إرسال للواتساب</button>
+                    <input type="text" id="userName" placeholder="اسمك الكريم" required>
+                    <select id="projectType">
+                        <option value="موقع جديد">طلب موقع جديد</option>
+                        <option value="تطوير">تطوير موقع قائم</option>
+                    </select>
+                    <textarea id="userMessage" placeholder="اشرح لي فكرتك باختصار" required></textarea>
+                    <button type="submit" class="btn-whatsapp">إرسال عبر واتساب</button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>جميع الحقوق محفوظة © 2026 | أشرف حسن</p>
+        <p>جميع الحقوق محفوظة © 2026 | تطوير المبدع أشرف حسن</p>
     </footer>
 
     <script>
@@ -118,10 +129,10 @@
             e.preventDefault();
             const name = document.getElementById('userName').value;
             const type = document.getElementById('projectType').value;
-            const message = document.getElementById('userMessage').value;
-            const myNumber = "201280208018"; 
-            const text = `مرحباً أشرف، أنا ${name}. بخصوص ${type}: ${message}`;
-            window.open(`https://wa.me/${myNumber}?text=${encodeURIComponent(text)}`, '_blank');
+            const msg = document.getElementById('userMessage').value;
+            const phone = "201280208018";
+            const text = `مرحباً أشرف، أنا ${name}. بخصوص ${type}: ${msg}`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
         });
     </script>
 </body>
