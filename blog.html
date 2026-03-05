@@ -1,139 +1,111 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>مدونة أشرف حسن</title>
-</head>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدونة أشرف التقنية | مقالات في تطوير الويب</title>
+    <title>مدونة أشرف التقنية | مقالات في تطوير الويب والربح</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .blog-header { padding: 100px 20px; background: #1e3a8a; color: white; text-align: center; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .post-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; }
-        .post-card:hover { transform: translateY(-5px); }
-        .post-content { padding: 20px; }
-        .post-category { color: #e63946; font-size: 0.8rem; font-weight: bold; }
-        .post-title { color: #1e3a8a; margin: 10px 0; }
-        .back-home { display: inline-block; margin-top: 20px; color: white; text-decoration: none; border: 1px solid white; padding: 10px 20px; border-radius: 5px; }
+        /* تنسيقات خاصة بالمدونة لتعمل مع ملف style.css الأصلي */
+        .blog-hero { padding: 100px 0; background: var(--dark); color: white; text-align: center; }
+        .blog-container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        .epic-article { background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 50px; }
+        .trending-badge { background: #ff4757; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 15px; }
+        .category-tag { color: var(--primary); font-weight: bold; font-size: 0.9rem; }
+        .article-header h1 { font-size: 2.2rem; margin: 15px 0; color: var(--dark); }
+        .article-image img { width: 100%; border-radius: 15px; margin: 25px 0; }
+        .article-content { line-height: 1.8; color: #444; font-size: 1.1rem; text-align: justify; }
+        .article-content h3 { margin: 30px 0 15px; color: var(--primary); }
+        .highlight-box { background: #f0f7ff; border-right: 5px solid var(--primary); padding: 20px; margin: 20px 0; border-radius: 10px; }
+        .ad-spot-premium { background: #fff3cd; border: 1px dashed #ffa000; padding: 15px; text-align: center; margin: 20px 0; border-radius: 10px; font-size: 0.9rem; }
+        .drop-cap { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .call-to-action-premium { background: var(--primary); color: white; padding: 30px; border-radius: 15px; text-align: center; margin-top: 40px; }
+        .btn-sub { display: inline-block; margin-top: 15px; color: white; text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <header class="blog-header">
-        <h1>مدونة أشرف التقنية 💡</h1>
-        <p>دروس، نصائح، وأسرار عالم البرمجة والربح من الإنترنت</p>
-        <a href="index.html" class="back-home"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">أشرف <span>حسن</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="index.html#portfolio">أعمالي</a></li>
+            <li><a href="index.html#contact">تواصل معي</a></li>
+        </ul>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="container">
+            <h1>مدونة أشرف التقنية 💡</h1>
+            <p>دليلك لاحتراف البرمجة والسيطرة على عالم الربح من الإنترنت 2026</p>
+        </div>
     </header>
 
-    <main class="blog-grid">
-        <article class="post-card">
-            <div style="height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 4rem;">💻</div>
-            <div class="post-content">
-                <span class="post-category">تعليمي</span>
-                <h3 class="post-title">كيف تبدأ في برمجة المواقع؟</h3>
-                <p>دليلك الشامل لتعلم الـ HTML و CSS من الصفر حتى الاحتراف...</p>
-                <a href="#" class="btn-preview" style="margin-top: 15px; text-align: center; display: block;">اقرأ المقال</a>
-            </div><article class="epic-article">
-    <header class="epic-header">
-        <div class="trending-badge">🔥 الأكثر قراءة اليوم</div>
-        <h1>مستقبل الربح من الإنترنت 2026: كيف تبني ثروتك من البرمجة والذكاء الاصطناعي؟</h1>
-        <p class="subtitle">دليل عملي للمبرمجين والمبتدئين للانتقال من الصفر إلى أول 1000 دولار شهرياً.</p>
-    </header>
+    <main class="blog-container">
 
-    <div class="epic-image">
-        <img src="blog-cover.webp" alt="الربح من البرمجة والذكاء الاصطناعي">
-    </div>
+        <article class="epic-article">
+            <header class="article-header">
+                <div class="trending-badge">🔥 الأكثر قراءة اليوم</div>
+                <span class="category-tag">ريادة أعمال وتطوير</span>
+                <h1>مستقبل الربح من الإنترنت 2026: كيف تبني ثروتك من البرمجة؟</h1>
+            </header>
 
-    <div class="epic-content">
-        <p class="drop-cap">الزمن يتغير بسرعة الصاروخ.</p>
-        <p>لم يعد الربح من الإنترنت مجرد رفاهية، بل أصبح ضرورة. لكن السؤال الصاعق هو: <strong>لماذا ينجح البعض في تحقيق آلاف الدولارات بينما يفشل الآخرون؟</strong> السر يكمن في دمج مهارة "تطوير الواجهات" مع قوة "الذكاء الاصطناعي".</p>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800" alt="الربح من الإنترنت">
+            </div>
 
-        <div class="highlight-box">
-            <h4>💡 الحقيقة الصاعقة:</h4>
-            <p>المواقع التي يتم إنشاؤها اليوم بدون مراعاة "تجربة المستخدم" وسرعة "WebP" هي مواقع ولدت ميتة ولن تظهر في محركات البحث.</p>
-        </div>
+            <div class="article-content">
+                <p class="drop-cap">الزمن يتغير بسرعة الصاروخ.</p>
+                <p>لم يعد الربح من الإنترنت مجرد رفاهية، بل أصبح ضرورة. السر يكمن في دمج مهارة "تطوير الواجهات" مع قوة "الذكاء الاصطناعي".</p>
 
-        <h3>1. عصر التطبيقات المصغرة (Micro-Apps)</h3>
-        <p>بدلاً من بناء مواقع عملاقة، اتجه المبرمجون الأذكياء لبناء أدوات بسيطة (مثل حاسبة قروض، أداة ضغط صور، أو منيو مطعم ذكي) وربطها بإعلانات أدسينس. هذه الأدوات تجلب ملايين الزوار شهرياً بشكل تلقائي.</p>
+                <div class="highlight-box">
+                    <h4>💡 الحقيقة الصاعقة:</h4>
+                    <p>المواقع التي يتم إنشاؤها اليوم بدون مراعاة "تجربة المستخدم" وسرعة التحميل هي مواقع ولدت ميتة ولن تظهر في محركات البحث.</p>
+                </div>
 
-        <div class="ad-spot-premium">
-            <span>إعلان ممول - أرباحك تبدأ هنا</span>
-        </div>
+                <h3>1. عصر التطبيقات المصغرة (Micro-Apps)</h3>
+                <p>بدلاً من بناء مواقع عملاقة، اتجه المبرمجون الأذكياء لبناء أدوات بسيطة (مثل حاسبة قروض، أو أداة ضغط صور) وربطها بإعلانات. هذه الأدوات تجلب ملايين الزوار شهرياً.</p>
 
-        <h3>2. الربح من بيع "القوالب الجاهزة"</h3>
-        <p>كما أفعل في متجري الشخصي، بيع القوالب الجاهزة (مثل قوالب المطاعم أو الفنيين) يعتبر دخلاً سلبياً (Passive Income) رائعاً. تصمم القالب مرة واحدة، وتبيعه ألف مرة!</p>
+                <div class="ad-spot-premium">
+                    <span>مساحة إعلانية مقترحة - ابدأ أرباحك الآن</span>
+                </div>
 
-        <h3>3. كيف تسيطر على نتائج بحث جوجل (SEO)؟</h3>
-        <p>جوجل في 2026 لا تبحث عن الكلمات فقط، بل تبحث عن <strong>"السرعة"</strong>. استخدامك لأكواد نظيفة وصور خفيفة هو تذكرتك الذهبية للصفحة الأولى.</p>
-    </div>
+                <h3>2. بيع القوالب الجاهزة</h3>
+                <p>تصميم القالب مرة واحدة وبيعه ألف مرة هو الدخل السلبي الحقيقي (Passive Income) الذي نسعى إليه جميعاً.</p>
+            </div>
 
-    <section class="call-to-action-premium">
-        <h3>🚀 ابدأ رحلتك الاحترافية الآن</h3>
-        <p>لا تضيع وقتك في البحث العشوائي. إذا كنت تريد بناء موقع احترافي يتصدر النتائج ويجلب الأرباح، فأنا هنا لمساعدتك.</p>
-        <div class="action-buttons">
-            <a href="#work" class="btn-main">شاهد أعمالي</a>
-            <a href="mailto:ashraflx71@gmail.com" class="btn-sub">استشارة مجانية</a>
-        </div>
-    </section>
-</article>
-
+            <div class="call-to-action-premium">
+                <h3>🚀 ابدأ رحلتك الاحترافية الآن</h3>
+                <p>إذا كنت تريد بناء موقع احترافي يتصدر النتائج ويجلب الأرباح، فأنا هنا لمساعدتك.</p>
+                <a href="index.html#contact" class="btn-primary" style="background:white; color:var(--primary);">احصل على استشارة مجانية</a>
+            </div>
         </article>
 
-        <article class="post-card">
-            <div style="height: 200px; background: #e0f2fe; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🚀</div>
-            <div class="post-content">
-                <span class="post-category">أداء</span>
-                <h3 class="post-title">أسرار سرعة المواقع</h3>
-                <p>تعلم كيف تجعل موقعك يفتح في أقل من ثانية لتحسين ترتيبك في جوجل...</p>
-                <a href="#" class="btn-preview" style="margin-top: 15px; text-align: center; display: block;">اقرأ المقال</a>
+        <article class="epic-article">
+            <header class="article-header">
+                <span class="category-tag">سيو وتطوير (SEO)</span>
+                <h1>كيف تزيد سرعة موقعك وتتصدر نتائج جوجل في 2026؟</h1>
+            </header>
+
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda536ad37?w=800" alt="سرعة المواقع">
             </div>
-        </article><article class="tech-article">
-    <header class="article-header">
-        <span class="category-tag">سيو وتطوير</span>
-        <h1>كيف تزيد سرعة موقعك وتتصدر نتائج جوجل في 2026؟</h1>
-        <div class="article-meta">
-            <span>بقلم: أشرف حسن</span> | <span>تاريخ النشر: 2 مارس 2026</span>
-        </div>
-    </header>
 
-    <div class="article-image">
-        <img src="blog-cover.webp" alt="تحسين سرعة الموقع وسيو" class="img-fluid">
-    </div>
+            <div class="article-content">
+                <p>هل تساءلت يوماً لماذا تظهر بعض المواقع في الصفحة الأولى بينما يختفي البعض الآخر؟ السر يكمن في <strong>سرعة التحميل</strong>.</p>
+                
+                <h3>استخدام صيغ الصور الحديثة (WebP)</h3>
+                <p>باستخدام صيغة <strong>WebP</strong>، يمكنك تقليل حجم الصور بنسبة 30% مع الحفاظ على الجودة، مما يجعل موقعك يفتح في لمح البصر.</p>
 
-    <div class="article-content">
-        <p>هل تساءلت يوماً لماذا تظهر بعض المواقع في الصفحة الأولى من جوجل بينما يختفي البعض الآخر؟ السر يكمن في <strong>سرعة التحميل</strong>.</p>
-        
-        <h3>1. استخدام صيغ الصور الحديثة (WebP)</h3>
-        <p>تعتبر الصور أثقل جزء في أي موقع. باستخدام صيغة <strong>WebP</strong>، يمكنك تقليل حجم الصور بنسبة 30% مع الحفاظ على الجودة، مما يجعل موقعك يفتح في لمح البصر.</p>
+                <h3>نظافة الكود (Clean Code)</h3>
+                <p>تقليل ملفات CSS و JS الزائدة يساعد عناكب البحث على فهم موقعك وأرشفته بشكل أسرع.</p>
+            </div>
+        </article>
 
-        <h3>2. التجاوب مع الهواتف الذكية</h3>
-        <p>جوجل تعطي الأولوية للمواقع التي تعمل بكفاءة على الموبايل. تأكد دائماً أن تصميمك "Responsive".</p>
+    </main>
 
-        <div class="ad-placeholder">
-            <p style="color: #888; font-style: italic;">[مساحة إعلانية مقترحة]</p>
-        </div>
-
-        <h3>3. نظافة الكود (Clean Code)</h3>
-        <p>تقليل ملفات CSS و JS الزائدة يساعد عناكب البحث على فهم موقعك وأرشفته بشكل أسرع.</p>
-    </div>
-
-    <footer class="article-footer">
-        <h4>هل تريد موقعاً احترافياً وسريعاً؟</h4>
-        <p>أنا متخصص في بناء واجهات سريعة ومتوافقة مع محركات البحث. لا تتردد في مراسلتي لبدء مشروعك القادم.</p>
-        <a href="mailto:ashraflx71@gmail.com" class="btn-contact">اطلب مشروعك الآن</a>
-    </footer>
-</article>
-
-
-        </main>
-
-    <footer style="text-align: center; padding: 40px; background: #f8fafc;">
+    <footer style="text-align: center; padding: 40px; background: var(--dark); color: #fff;">
         <p>حقوق النشر © 2026 | مدونة أشرف حسن</p>
     </footer>
 
