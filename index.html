@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أشرف حسن | مبرمج واجهات واحترافي سيو</title>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G25701MZQ8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,22 +13,12 @@
       gtag('config', 'G-G25701MZQ8');
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أشرف حسن | مبرمج واجهات وخبير سيو</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* إضافة خاصية الانزلاق الناعم */
-        html { scroll-behavior: smooth; }
-        section { min-height: 80vh; padding: 100px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    </style>
 </head>
 <body>
     <div class="bg-blur"></div>
-
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">ASHRAF<span>.DEV</span></div>
@@ -32,69 +26,37 @@
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#services">خدماتي</a></li>
                 <li><a href="#portfolio">أعمالي</a></li>
-                <li><a href="#blog">المدونة</a></li>
-                <li><a href="#contact" class="btn-nav">اتصل بي</a></li>
+                <li><a href="blog.html">المدونة</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="container">
-            <h1 class="hero-title">أهلاً بك في عالم <span class="text-gradient">أشرف حسن</span></h1>
-            <p class="hero-desc">حيث تلتقي البرمجة بالإبداع لتخرج مشاريعك للنور.</p>
+            <h1 class="hero-title">نصمم المستقبل <br><span class="text-gradient">بأكواد احترافية</span></h1>
+            <p class="hero-desc">أهلاً بك في موقع أشرف حسن - مبرمج واجهات المستخدم وخبير تحسين محركات البحث.</p>
         </div>
     </header>
 
-    <section id="services">
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="text-gradient">خدماتي</h2>
             <div class="services-grid">
-                <div class="glass-card"><h3>برمجة كاملة</h3><p>بناء المواقع من الألف للياء.</p></div>
-                <div class="glass-card"><h3>SEO</h3><p>تصدر نتائج البحث.</p></div>
+                <div class="glass-card">
+                    <i class="fas fa-code"></i>
+                    <h3>تطوير المواقع</h3>
+                    <p>بناء مواقع سريعة ومتجاوبة مع كافة الشاشات.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-search-dollar"></i>
+                    <h3>تحسين السيو</h3>
+                    <p>نساعدك للظهور في الصفحة الأولى من نتائج بحث جوجل.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="text-gradient">أعمالي</h2>
-            <div class="glass-card">
-                <p>هنا يتم عرض المشاريع التي قمت بتنفيذها.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog">
-        <div class="container">
-            <h2 class="text-gradient">المدونة</h2>
-            <div class="glass-card">
-                <h3>أحدث المقالات</h3>
-                <p>اطلع على آخر أخبار التكنولوجيا.</p>
-                <a href="blog.html" class="read-more">انتقل لصفحة المدونة المستقلة →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <div class="contact-box">
-                <h2>ابدأ مشروعك الآن</h2>
-                <form id="whatsappForm">
-                    <input type="text" id="userName" placeholder="الاسم" required>
-                    <textarea id="userMessage" placeholder="رسالتك" required></textarea>
-                    <button type="submit" class="btn-submit">تواصل واتساب</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('userName').value;
-            const msg = document.getElementById('userMessage').value;
-            window.open(`https://wa.me/201280208018?text=أنا ${name}: ${msg}`, '_blank');
-        });
-    </script>
+    <footer>
+        <p>© 2026 جميع الحقوق محفوظة | أشرف حسن</p>
+    </footer>
 </body>
 </html>
