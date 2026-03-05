@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* إضافة خاصية الانزلاق الناعم */
+        html { scroll-behavior: smooth; }
+        section { min-height: 80vh; padding: 100px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    </style>
 </head>
 <body>
     <div class="bg-blur"></div>
@@ -34,47 +40,49 @@
 
     <header id="home" class="hero">
         <div class="container">
-            <h1 class="hero-title">نصمم المستقبل <br><span class="text-gradient">بأكواد احترافية</span></h1>
-            <p class="hero-desc">خبير تطوير واجهات المستخدم وتحسين محركات البحث.</p>
+            <h1 class="hero-title">أهلاً بك في عالم <span class="text-gradient">أشرف حسن</span></h1>
+            <p class="hero-desc">حيث تلتقي البرمجة بالإبداع لتخرج مشاريعك للنور.</p>
         </div>
     </header>
 
-    <section id="services" class="services" style="padding: 100px 0;">
+    <section id="services">
         <div class="container">
-            <h2 style="color: white; text-align: center; margin-bottom: 40px;">خدماتي الاحترافية</h2>
+            <h2 class="text-gradient">خدماتي</h2>
             <div class="services-grid">
-                <div class="glass-card"><h3>برمجة المواقع</h3><p>أداء صاروخي وكود نظيف.</p></div>
-                <div class="glass-card"><h3>تحسين السيو SEO</h3><p>تصدر نتائج البحث الأولى.</p></div>
+                <div class="glass-card"><h3>برمجة كاملة</h3><p>بناء المواقع من الألف للياء.</p></div>
+                <div class="glass-card"><h3>SEO</h3><p>تصدر نتائج البحث.</p></div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio" style="padding: 100px 0;">
+    <section id="portfolio">
         <div class="container">
-            <h2 style="color: white; text-align: center;">معرض الأعمال</h2>
-            <div class="glass-card" style="margin-top: 20px;">
-                <p style="color: white; text-align: center;">قريباً.. استعراض المشاريع الكبرى 2026</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="blog-preview" style="padding: 100px 0;">
-        <div class="container">
+            <h2 class="text-gradient">أعمالي</h2>
             <div class="glass-card">
-                <h2>آخر المقالات</h2>
-                <a href="blog.html" class="read-more">انتقل لصفحة المدونة الكاملة</a>
+                <p>هنا يتم عرض المشاريع التي قمت بتنفيذها.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-ultra" style="padding: 100px 0;">
+    <section id="blog">
+        <div class="container">
+            <h2 class="text-gradient">المدونة</h2>
+            <div class="glass-card">
+                <h3>أحدث المقالات</h3>
+                <p>اطلع على آخر أخبار التكنولوجيا.</p>
+                <a href="blog.html" class="read-more">انتقل لصفحة المدونة المستقلة →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
         <div class="container">
             <div class="contact-box">
-                <h2>اطلب مشروعك الآن</h2>
+                <h2>ابدأ مشروعك الآن</h2>
                 <form id="whatsappForm">
                     <input type="text" id="userName" placeholder="الاسم" required>
-                    <textarea id="userMessage" placeholder="تفاصيل المشروع" required></textarea>
-                    <button type="submit" class="btn-submit">إرسال للواتساب</button>
+                    <textarea id="userMessage" placeholder="رسالتك" required></textarea>
+                    <button type="submit" class="btn-submit">تواصل واتساب</button>
                 </form>
             </div>
         </div>
