@@ -1,110 +1,24 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2 class="shop-title">💎 متجر قوالب بلوجر الاحترافية</h2>
+<div class="templates-grid">
     
-    <meta name="google-site-verification" content="MzpX7zT-T8r_oG7TAb7bVhDSAzio1BSNcTN0aUMqRI4" />
-
-    <title>عالم أشرف الرقمي - هدوء وإبداع</title>
-    <link rel="canonical" href="https://ashraflx71.github.io/my-first-app-/" />
-    
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --accent-color: #10b981;
-        }
-
-        body {
-            background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
-            color: #f8fafc;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            transition: all 1s ease;
-        }
-
-        .container {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(15px);
-            padding: 3rem;
-            border-radius: 30px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-            text-align: center;
-            max-width: 450px;
-            width: 85%;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        h1 { color: #10b981; font-size: 1.8rem; margin-bottom: 1rem; }
-        #message { margin: 25px 0; font-size: 1.3rem; min-height: 80px; font-style: italic; }
-
-        button {
-            background: #10b981;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
-        }
-
-        button:hover { transform: scale(1.05); background: #059669; }
-        .audio-control { margin-top: 20px; font-size: 0.8rem; color: #64748b; cursor: pointer; text-decoration: underline; }
-        .footer { margin-top: 30px; font-size: 0.85rem; color: #94a3b8; }
-    </style>
-</head>
-<body>
-
-    <audio id="birdsAudio" loop>
-        <source src="https://www.soundjay.com/nature/sounds/birds-chirping-05.mp3" type="audio/mpeg">
-    </audio>
-
-    <div class="container">
-        <h1>🍃 جنة أشرف الرقمية</h1>
-        <div id="message">"الراحة في العمل إنجاز، والراحة بعده بركة"</div>
-        
-        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            <button onclick="updateApp()">رسالة اليوم وزقزقة عصافير</button>
-            <div class="audio-control" onclick="toggleAudio()">🔈 تشغيل/كتم صوت الطبيعة</div>
+    <div class="template-card">
+        <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=200&h=120" alt="قالب إخباري">
+        <h3>قالب "الريادة" الإخباري</h3>
+        <p>متوافق تماماً مع معايير السيو (SEO)</p>
+        <div class="card-btns">
+            <a href="https://ashraflx71.github.io/my-first-app-/" class="btn-sm btn-demo">معاينة</a>
+            <a href="https://wa.me/201280208018?text=أهلاً أشرف، أريد شراء قالب الريادة" class="btn-sm btn-buy">شراء الآن</a>
         </div>
-        
-        <div class="footer">تم التحقق بواسطة Google | تطوير: أشرف - 2026</div>
     </div>
 
-    <script>
-        const messages = [
-            "اللهم صلِّ وسلم على نبينا محمد 🌸",
-            "سبحان الله وبحمده، عدد خلقه ورضا نفسه.",
-            "الراحة في العمل إنجاز، والراحة بعده بركة.",
-            "استعن بالله ولا تعجز، فجبر القلوب عليه سبحانه.",
-            "ابتسم.. فالعصافير تسبح بحمد ربها كل يوم.",
-            "اللهم لا تحوجني لأحد من خلقك وأغنني بفضلك."
-        ];
+    <div class="template-card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=200&h=120" alt="قالب متجر">
+        <h3>قالب "سوق" الذكي</h3>
+        <p>أفضل خيار لزيادة مبيعاتك على بلوجر</p>
+        <div class="card-btns">
+            <a href="https://ashraflx71.github.io/my-first-app-/" class="btn-sm btn-demo">معاينة</a>
+            <a href="https://wa.me/201280208018?text=أهلاً أشرف، أريد شراء قالب سوق الذكي" class="btn-sm btn-buy">شراء الآن</a>
+        </div>
+    </div>
 
-        function updateApp() {
-            const msgElement = document.getElementById('message');
-            const audio = document.getElementById('birdsAudio');
-            if (audio.paused) { audio.play().catch(e => console.log("Audio play deferred")); }
-
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            msgElement.style.opacity = 0;
-            setTimeout(() => {
-                msgElement.innerText = messages[randomIndex];
-                msgElement.style.opacity = 1;
-            }, 300);
-        }
-
-        function toggleAudio() {
-            const audio = document.getElementById('birdsAudio');
-            if (audio.paused) { audio.play(); } else { audio.pause(); }
-        }
-    </script>
-</body>
-</html>
+</div>
