@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عالم أشرف الرقمي - هدوء وطبيعة</title>
+    
+    <meta name="google-site-verification" content="qi6xMRDpp69xr52dGV1MJhrmGSwVO-HnHEtniY1cyRo" />
+
+    <title>عالم أشرف الرقمي - هدوء وإبداع</title>
     <link rel="canonical" href="https://ashraflx71.github.io/my-first-app-/" />
     
     <style>
         :root {
             --bg-color: #0f172a;
-            --accent-color: #10b981; /* لون أخضر هادئ مثل الطبيعة */
+            --accent-color: #10b981;
         }
 
         body {
@@ -22,7 +25,6 @@
             min-height: 100vh;
             margin: 0;
             transition: all 1s ease;
-            overflow: hidden;
         }
 
         .container {
@@ -33,19 +35,12 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.6);
             text-align: center;
             max-width: 450px;
+            width: 85%;
             border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
         h1 { color: #10b981; font-size: 1.8rem; margin-bottom: 1rem; }
-        
-        #message { 
-            margin: 25px 0; 
-            font-size: 1.3rem; 
-            min-height: 80px;
-            font-style: italic;
-        }
-
-        .btn-box { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+        #message { margin: 25px 0; font-size: 1.3rem; min-height: 80px; font-style: italic; }
 
         button {
             background: #10b981;
@@ -57,16 +52,12 @@
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
         }
 
         button:hover { transform: scale(1.05); background: #059669; }
-
-        .audio-control {
-            margin-top: 20px;
-            font-size: 0.8rem;
-            color: #64748b;
-            cursor: pointer;
-        }
+        .audio-control { margin-top: 20px; font-size: 0.8rem; color: #64748b; cursor: pointer; text-decoration: underline; }
+        .footer { margin-top: 30px; font-size: 0.85rem; color: #94a3b8; }
     </style>
 </head>
 <body>
@@ -79,37 +70,31 @@
         <h1>🍃 جنة أشرف الرقمية</h1>
         <div id="message">"الراحة في العمل إنجاز، والراحة بعده بركة"</div>
         
-        <div class="btn-box">
+        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
             <button onclick="updateApp()">رسالة اليوم وزقزقة عصافير</button>
-            <div class="audio-control" onclick="toggleAudio()">🔈 تشغيل/كتم الصوت</div>
+            <div class="audio-control" onclick="toggleAudio()">🔈 تشغيل/كتم صوت الطبيعة</div>
         </div>
         
-        <div class="footer">تطوير بكل حب: أشرف - 2026</div>
+        <div class="footer">تم التحقق بواسطة Google | تطوير: أشرف - 2026</div>
     </div>
 
     <script>
         const messages = [
             "اللهم صلِّ وسلم على نبينا محمد 🌸",
-            "اللهم لا تحوجني لأحد من خلقك وأغنني بفضلك.",
-            "الراحة في العمل إنجاز، والراحة بعده بركة.",
             "سبحان الله وبحمده، عدد خلقه ورضا نفسه.",
+            "الراحة في العمل إنجاز، والراحة بعده بركة.",
+            "استعن بالله ولا تعجز، فجبر القلوب عليه سبحانه.",
             "ابتسم.. فالعصافير تسبح بحمد ربها كل يوم.",
-            "صحتك أمانة، خذ نفساً عميقاً واستمتع باللحظة."
+            "اللهم لا تحوجني لأحد من خلقك وأغنني بفضلك."
         ];
 
         function updateApp() {
             const msgElement = document.getElementById('message');
             const audio = document.getElementById('birdsAudio');
-            
-            // تشغيل الصوت مع أول ضغطة
-            if (audio.paused) {
-                audio.play();
-            }
+            if (audio.paused) { audio.play().catch(e => console.log("Audio play deferred")); }
 
-            // تحديث الرسالة
             const randomIndex = Math.floor(Math.random() * messages.length);
             msgElement.style.opacity = 0;
-            
             setTimeout(() => {
                 msgElement.innerText = messages[randomIndex];
                 msgElement.style.opacity = 1;
