@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيق أشرف المتطور</title>
+    <title>عالم أشرف الرقمي 2026</title>
     <link rel="canonical" href="https://ashraflx71.github.io/my-first-app-/" />
     
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --accent-color: #38bdf8;
+        }
+
         body {
-            background-color: #0f172a; /* لون ليلي هادئ */
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #f8fafc;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -16,69 +21,120 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            transition: background 0.5s ease;
+            transition: all 0.8s ease; /* تنقل ناعم بين الألوان */
         }
+
         .container {
-            background: #1e293b;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
             text-align: center;
-            max-width: 400px;
-            border: 1px solid #334155;
+            max-width: 450px;
+            width: 90%;
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        h1 { color: #38bdf8; font-size: 1.5rem; }
-        #message { margin: 20px 0; font-size: 1.1rem; line-height: 1.6; }
-        
+
+        h1 { 
+            color: var(--accent-color); 
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        #message { 
+            margin: 25px 0; 
+            font-size: 1.2rem; 
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+
         button {
-            background: #38bdf8;
+            background: var(--accent-color);
             color: #0f172a;
             border: none;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: bold;
+            padding: 12px 35px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.2s, background 0.3s;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+            transition: all 0.2s;
         }
+
         button:hover {
-            background: #7dd3fc;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
         }
-        .footer { margin-top: 20px; font-size: 0.8rem; color: #94a3b8; }
+
+        .counter {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 0.85rem; 
+            color: #94a3b8;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>مرحباً بك في عالمي الرقمي</h1>
-        <div id="message">اضغط على الزر للحصول على رسالة..</div>
-        <button onclick="getInspiration()">رسالة اليوم</button>
-        <div class="footer">تطوير: أشرف - 2026</div>
+        <div id="message">"الراحة في العمل إنجاز، والراحة بعده بركة"</div>
+        <button onclick="updateApp()">رسالة اليوم</button>
+        
+        <div class="counter">عدد رسائل الإلهام: <span id="count">1</span></div>
+        <div class="footer">تطوير بكل حب: أشرف - 2026</div>
     </div>
 
     <script>
+        let clickCount = 1;
         const messages = [
             "اللهم لا تحوجني لأحد من خلقك وأغنني بفضلك.",
             "الراحة في العمل إنجاز، والراحة بعده بركة.",
-            "سبحان الله وبحمده، سبحان الله العظيم.",
-            "خطوة صغيرة كل يوم تصنع فرقاً كبيراً.",
-            "صحتك هي رأس مالك، لا تنسَ شرب الماء!"
+            "استعن بالله ولا تعجز، فجبر القلوب عليه سبحانه.",
+            "خطوة صغيرة واثقة خيرٌ من قفزة طويلة متعثرة.",
+            "ابتسم.. فربك الله، وهو يدبر الأمر من حيث لا تحتسب.",
+            "صحتك هي وقود إبداعك، خذ نفساً عميقاً."
         ];
 
-        function getInspiration() {
-            const randomIndex = Math.floor(Math.random() * messages.length);
+        const colors = [
+            'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+            'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
+            'linear-gradient(135deg, #064e3b 0%, #065f46 100%)',
+            'linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%)'
+        ];
+
+        function updateApp() {
             const msgElement = document.getElementById('message');
+            const countElement = document.getElementById('count');
             
-            // إضافة تأثير اختفاء وظهور بسيط
+            // تحديث الرسالة
+            const randomIndex = Math.floor(Math.random() * messages.length);
             msgElement.style.opacity = 0;
+            
             setTimeout(() => {
                 msgElement.innerText = messages[randomIndex];
                 msgElement.style.opacity = 1;
-            }, 200);
+                
+                // تحديث العداد
+                clickCount++;
+                countElement.innerText = clickCount;
+                
+                // تغيير لون الخلفية بشكل عشوائي
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                document.body.style.background = randomColor;
+            }, 300);
         }
-        
-        // رسالة ترحيبية في الكونسول للمبرمج (أنت)
-        console.log("استمر يا بطل، العمل عبادة والاتقان سعادة!");
     </script>
 </body>
 </html>
