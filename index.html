@@ -3,49 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيق أشرف - My First App</title>
-    
+    <title>تطبيق أشرف المتطور</title>
     <link rel="canonical" href="https://ashraflx71.github.io/my-first-app-/" />
-
+    
     <style>
-
-        /* ضع كل كود الـ CSS الخاص بك هنا */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #0f172a; /* لون ليلي هادئ */
+            color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            transition: background 0.5s ease;
         }
         .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: auto;
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+            border: 1px solid #334155;
         }
-        h1 { color: #333; }
-        /* أضف باقي تنسيقاتك هنا */
+        h1 { color: #38bdf8; font-size: 1.5rem; }
+        #message { margin: 20px 0; font-size: 1.1rem; line-height: 1.6; }
+        
+        button {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+        button:hover {
+            background: #7dd3fc;
+            transform: scale(1.05);
+        }
+        .footer { margin-top: 20px; font-size: 0.8rem; color: #94a3b8; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>مرحباً بك في تطبيقي الأول</h1>
-        <p id="message">جاري تحميل المحتوى...</p>
-        
-        </div>
+        <h1>مرحباً بك في عالمي الرقمي</h1>
+        <div id="message">اضغط على الزر للحصول على رسالة..</div>
+        <button onclick="getInspiration()">رسالة اليوم</button>
+        <div class="footer">تطوير: أشرف - 2026</div>
+    </div>
 
     <script>
-        // ضع كل كود الـ JavaScript الخاص بك هنا
-        document.addEventListener('DOMContentLoaded', () => {
-            const msg = document.getElementById('message');
-            msg.innerText = "تم دمج الملفات بنجاح والعمل مستمر!";
-            console.log("App is running smoothly.");
-        });
+        const messages = [
+            "اللهم لا تحوجني لأحد من خلقك وأغنني بفضلك.",
+            "الراحة في العمل إنجاز، والراحة بعده بركة.",
+            "سبحان الله وبحمده، سبحان الله العظيم.",
+            "خطوة صغيرة كل يوم تصنع فرقاً كبيراً.",
+            "صحتك هي رأس مالك، لا تنسَ شرب الماء!"
+        ];
+
+        function getInspiration() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const msgElement = document.getElementById('message');
+            
+            // إضافة تأثير اختفاء وظهور بسيط
+            msgElement.style.opacity = 0;
+            setTimeout(() => {
+                msgElement.innerText = messages[randomIndex];
+                msgElement.style.opacity = 1;
+            }, 200);
+        }
         
-        // أضف باقي وظائفك هنا
+        // رسالة ترحيبية في الكونسول للمبرمج (أنت)
+        console.log("استمر يا بطل، العمل عبادة والاتقان سعادة!");
     </script>
 </body>
 </html>
