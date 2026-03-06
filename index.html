@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عالم أشرف الرقمي 2026</title>
+    <title>عالم أشرف الرقمي - هدوء وطبيعة</title>
     <link rel="canonical" href="https://ashraflx71.github.io/my-first-app-/" />
     
     <style>
         :root {
             --bg-color: #0f172a;
-            --accent-color: #38bdf8;
+            --accent-color: #10b981; /* لون أخضر هادئ مثل الطبيعة */
         }
 
         body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
             color: #f8fafc;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -21,103 +21,91 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            transition: all 0.8s ease; /* تنقل ناعم بين الألوان */
+            transition: all 1s ease;
+            overflow: hidden;
         }
 
         .container {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
-            padding: 2.5rem;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
             text-align: center;
             max-width: 450px;
-            width: 90%;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
-        h1 { 
-            color: var(--accent-color); 
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
+        h1 { color: #10b981; font-size: 1.8rem; margin-bottom: 1rem; }
+        
         #message { 
             margin: 25px 0; 
-            font-size: 1.2rem; 
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.3s;
+            font-size: 1.3rem; 
+            min-height: 80px;
+            font-style: italic;
         }
+
+        .btn-box { display: flex; flex-direction: column; gap: 10px; align-items: center; }
 
         button {
-            background: var(--accent-color);
-            color: #0f172a;
+            background: #10b981;
+            color: white;
             border: none;
-            padding: 12px 35px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-            transition: all 0.2s;
+            transition: 0.3s;
         }
 
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
-        }
+        button:hover { transform: scale(1.05); background: #059669; }
 
-        .counter {
+        .audio-control {
             margin-top: 20px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #64748b;
-        }
-
-        .footer { 
-            margin-top: 30px; 
-            font-size: 0.85rem; 
-            color: #94a3b8;
-            letter-spacing: 1px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
+    <audio id="birdsAudio" loop>
+        <source src="https://www.soundjay.com/nature/sounds/birds-chirping-05.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="container">
-        <h1>مرحباً بك في عالمي الرقمي</h1>
+        <h1>🍃 جنة أشرف الرقمية</h1>
         <div id="message">"الراحة في العمل إنجاز، والراحة بعده بركة"</div>
-        <button onclick="updateApp()">رسالة اليوم</button>
         
-        <div class="counter">عدد رسائل الإلهام: <span id="count">1</span></div>
+        <div class="btn-box">
+            <button onclick="updateApp()">رسالة اليوم وزقزقة عصافير</button>
+            <div class="audio-control" onclick="toggleAudio()">🔈 تشغيل/كتم الصوت</div>
+        </div>
+        
         <div class="footer">تطوير بكل حب: أشرف - 2026</div>
     </div>
 
     <script>
-        let clickCount = 1;
         const messages = [
+            "اللهم صلِّ وسلم على نبينا محمد 🌸",
             "اللهم لا تحوجني لأحد من خلقك وأغنني بفضلك.",
             "الراحة في العمل إنجاز، والراحة بعده بركة.",
-            "استعن بالله ولا تعجز، فجبر القلوب عليه سبحانه.",
-            "خطوة صغيرة واثقة خيرٌ من قفزة طويلة متعثرة.",
-            "ابتسم.. فربك الله، وهو يدبر الأمر من حيث لا تحتسب.",
-            "صحتك هي وقود إبداعك، خذ نفساً عميقاً."
-        ];
-
-        const colors = [
-            'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-            'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
-            'linear-gradient(135deg, #064e3b 0%, #065f46 100%)',
-            'linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%)'
+            "سبحان الله وبحمده، عدد خلقه ورضا نفسه.",
+            "ابتسم.. فالعصافير تسبح بحمد ربها كل يوم.",
+            "صحتك أمانة، خذ نفساً عميقاً واستمتع باللحظة."
         ];
 
         function updateApp() {
             const msgElement = document.getElementById('message');
-            const countElement = document.getElementById('count');
+            const audio = document.getElementById('birdsAudio');
             
+            // تشغيل الصوت مع أول ضغطة
+            if (audio.paused) {
+                audio.play();
+            }
+
             // تحديث الرسالة
             const randomIndex = Math.floor(Math.random() * messages.length);
             msgElement.style.opacity = 0;
@@ -125,15 +113,12 @@
             setTimeout(() => {
                 msgElement.innerText = messages[randomIndex];
                 msgElement.style.opacity = 1;
-                
-                // تحديث العداد
-                clickCount++;
-                countElement.innerText = clickCount;
-                
-                // تغيير لون الخلفية بشكل عشوائي
-                const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                document.body.style.background = randomColor;
             }, 300);
+        }
+
+        function toggleAudio() {
+            const audio = document.getElementById('birdsAudio');
+            if (audio.paused) { audio.play(); } else { audio.pause(); }
         }
     </script>
 </body>
