@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمالي | أشرف حسن 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2ecc71; --bg: #0f172a; --glass: rgba(255, 255, 255, 0.05); }
+        body { margin: 0; font-family: 'Cairo', sans-serif; background: var(--bg); color: white; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        
+        .header { text-align: center; margin-bottom: 50px; }
+        .header h1 { font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
+        .text-gradient { background: linear-gradient(45deg, #2ecc71, #3498db); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .project-card { 
+            background: var(--glass); border: 1px solid rgba(46, 204, 113, 0.2); 
+            border-radius: 20px; overflow: hidden; transition: 0.4s; backdrop-filter: blur(10px);
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2); }
+        
+        .project-img { height: 200px; background: #1e293b; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .project-img img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .project-info { padding: 20px; }
+        .project-info h3 { margin: 0 0 10px; color: var(--primary); }
+        .project-info p { color: #cbd5e1; font-size: 14px; margin-bottom: 20px; }
+        
+        .btn-project { 
+            display: inline-block; padding: 10px 20px; background: var(--primary); 
+            color: #0f172a; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 14px;
+        }
+
+        .back-nav { margin-bottom: 30px; }
+        .back-nav a { color: var(--primary); text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="index.html"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+        </div>
+
+        <div class="header">
+            <h1>معرض <span class="text-gradient">الإبداع</span></h1>
+            <p>هنا أستعرض معكم أبرز المشاريع التي قمت بتطويرها بشغف</p>
+        </div>
+
+        <div class="portfolio-grid">
+            
+            <div class="project-card">
+                <div class="project-img"><img src="outdoor.png" alt="Optimum 2026"></div>
+                <div class="project-info">
+                    <h3>مدونة Optimum 2026</h3>
+                    <p>منصة تقنية متكاملة تركز على استراتيجيات النجاح وتحسين محركات البحث SEO لعام 2026.</p>
+                    <a href="https://optimum2026.blogspot.com/" target="_blank" class="btn-project">معاينة الموقع</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img" style="background: #2c3e50;"><i class="fas fa-utensils fa-4x" style="color: #2ecc71;"></i></div>
+                <div class="project-info">
+                    <h3>نظام إدارة المطاعم</h3>
+                    <p>واجهة أمامية احترافية لمطعم حديث تدعم طلب الطعام وعرض القوائم بشكل متجاوب.</p>
+                    <a href="restaurant.html" class="btn-project">مشاهدة التفاصيل</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img" style="background: #1a1a1a;"><i class="fas fa-laptop-code fa-4x" style="color: #3498db;"></i></div>
+                <div class="project-info">
+                    <h3>مشروع البرمجة الأول</h3>
+                    <p>تطبيق ويب بسيط تم بناؤه أثناء رحلة تعلم البرمجة من الهاتف المحمول.</p>
+                    <a href="project1.html" class="btn-project">استكشاف المشروع</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
