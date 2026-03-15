@@ -6,41 +6,90 @@
     <title>Creative 2026 - PWA</title>
 
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FFD700">
 
     <style>
+        /* تنسيق التصميم: أسود وذهبي مع خط كبير */
         body {
             background-color: #000000; /* خلفية سوداء */
             color: #FFD700;           /* خط ذهبي */
-            font-size: 20px;          /* خط كبير وواضح */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            border: 1px solid #FFD700;
+            font-size: 20px;          /* خط كبير وواضح */
+            margin: 0;
             padding: 20px;
-            border-radius: 10px;
+            line-height: 1.8;
+            text-align: center;
         }
-        h1 { border-bottom: 2px solid #FFD700; padding-bottom: 10px; }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            border: 2px solid #FFD700; /* إطار ذهبي */
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #FFD700;
+            padding-bottom: 10px;
+        }
+
+        .btn-install {
+            background-color: #FFD700;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>مرحباً بك في تطبيق Creative 2026</h1>
-        <p>هذا الموقع مهيأ ليعمل كتطبيق PWA على هاتفك.</p>
+        <h1>منصة Creative 2026</h1>
+        <p>مرحباً بك! هذا الموقع الآن يدعم تقنية الـ PWA.</p>
+        <p>يمكنك تثبيته على هاتفك ليظهر كأيقونة تطبيق مستقلة.</p>
+        
+        <button id="installBtn" class="btn-install" style="display:none;">تثبيت التطبيق الآن</button>
     </div>
 
     <script>
+        // تفعيل الـ Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('تم تسجيل الـ Service Worker بنجاح'))
-                    .catch(err => console.log('فشل التسجيل:', err));
+                    .then(reg => console.log('تم التفعيل بنجاح!'))
+                    .catch(err => console.log('فشل التفعيل:', err));
             });
         }
+
+        // كود إضافي لإظهار زر التثبيت (اختياري)
+        let deferredPrompt;
+        const installBtn = document.getElementById('installBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'inline-block';
+
+            installBtn.addEventListener('click', () => {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('وافق المستخدم على التثبيت');
+                    }
+                    installBtn.style.display = 'none';
+                });
+            });
+        });
     </script>
 
 </body>
