@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashraf Video Gen 2026</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding: 20px; }
+        #preview { border: 2px solid #333; margin-top: 10px; max-width: 100%; height: auto; display: none; }
+        textarea { width: 90%; height: 100px; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+        button { background: #007bff; color: white; border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h2>مولد فيديوهات أشرف حسن 🚀</h2>
+    <textarea id="inputText" placeholder="اكتب النص الذي تريد تحويله لفيديو هنا..."></textarea><br>
+    <input type="file" id="bgImage" accept="image/*"><br><br>
+    <button onclick="startProcessing()">توليد الفيديو الآن</button>
+    <canvas id="videoCanvas" width="720" height="1280" style="display:none;"></canvas>
+    <p id="status"></p>
+
+    <script>
+        async function startProcessing() {
+            const text = document.getElementById('inputText').value;
+            const canvas = document.getElementById('videoCanvas');
+            const ctx = canvas.getContext('2d');
+            const status = document.getElementById('status');
+            const imageInput = document.getElementById('bgImage');
+            
+            if(!text) return alert("من فضلك اكتب نصاً");
+
+            status.innerText = "جاري تحضير المحرك... ⚙️";
+            
+            // 1. إعداد الصوت
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ar-SA';
+            utterance.rate = 0.9;
+
+            // 2. إعداد المسجل
+            const stream = canvas.captureStream(30);
+            const recorder = new MediaRecorder(stream, { mimeType: 'video/webm;codecs=vp9' });
+            const chunks = [];
+            recorder.ondataavailable = e => chunks.push(e.data);
+            recorder.onstop = () => {
+                const blob = new Blob(chunks, { type: 'video/webm' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Ashraf_Video_2026.webm';
+                a.click();
+                status.innerText = "تم التحميل بنجاح! ✅";
+            };
+
+            // 3. محرك الرسم (Animation Loop)
+            let img = new Image();
+            if(imageInput.files[0]) img.src = URL.createObjectURL(imageInput.files[0]);
+            
+            utterance.onstart = () => {
+                recorder.start();
+                animate();
+            };
+
+            utterance.onend = () => {
+                setTimeout(() => recorder.stop(), 1000);
+            };
+
+            function animate() {
+                if (recorder.state === "recording") {
+                    // خلفية
+                    ctx.fillStyle = "#1a1a1a";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    if(img.src) ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                    // نص متحرك (تأثير بسيط)
+                    ctx.fillStyle = "white";
+                    ctx.font = "bold 40px Arial";
+                    ctx.textAlign = "center";
+                    wrapText(ctx, text, canvas.width/2, canvas.height/2, canvas.width - 100, 50);
+                    
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function wrapText(context, text, x, y, maxWidth, lineHeight) {
+            var words = text.split(' ');
+            var line = '';
+            for(var n = 0; n < words.length; n++) {
+                var testLine = line + words[n] + ' ';
+                var metrics = context.measureText(testLine);
+                if (metrics.width > maxWidth && n > 0) {
+                    context.fillText(line, x, y);
+                    line = words[n] + ' ';
+                    y += lineHeight;
+                } else { line = testLine; }
+            }
+            context.fillText(line, x, y);
+        }
+    </script>
+</body>
+</html>
