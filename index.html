@@ -1,184 +1,35 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta name="description" content="منصة Creative 2026 بإدارة أشرف حسن - متخصص SEO، مصمم UI/UX ومطور ويب في الإسكندرية.">
-<meta name="keywords" content="أشرف حسن, Creative 2026, سيو, برمجة, الإسكندرية, UI/UX, الـعجمي">
-<meta name="author" content="Ashraf Hassan">
-
-<link rel="canonical" href="https://ashraflx71.github.io/my-first-app-/">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative 2026 | أشرف حسن</title>
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#FFD700">
-
-    <style>
-        /* تنسيق الألوان والخطوط */
-        :root {
-            --gold: #FFD700;
-            --black: #000000;
-            --dark-gray: #1a1a1a;
-        }
-
-        body {
-            background-color: var(--black);
-            color: var(--gold);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px; /* الخط الكبير الذي تفضله */
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-        }
-
-        /* رأس الصفحة (Header) */
-        header {
-            background-color: var(--dark-gray);
-            padding: 30px;
-            text-align: center;
-            border-bottom: 3px solid var(--gold);
-        }
-
-        .logo-text {
-            font-size: 35px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
-        }
-
-        /* الحاوية الرئيسية */
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        /* قسم الصور والمحتوى */
-        .card {
-            background-color: var(--dark-gray);
-            border: 1px solid var(--gold);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            background-color: var(--gold);
-            color: var(--black);
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 15px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #e6c200;
-            transform: scale(1.05);
-        }
-
-        /* تذييل الصفحة */
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 16px;
-            border-top: 1px solid var(--gold);
-            margin-top: 50px;
-        }
-
-        /* زر تثبيت التطبيق */
-        #installBanner {
-            display: none;
-            background: var(--gold);
-            color: var(--black);
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-weight: bold;
-            z-index: 1000;
-        }
-    </style>
 </head>
 <body>
-
-    <div id="installBanner">
-        هل تود إضافة Creative 2026 إلى شاشتك الرئيسية؟ 
-        <button onclick="installApp()" style="margin-right:10px; padding: 5px 15px;">نعم، تثبيت</button>
-    </div>
-
-    <header>
-        <div class="logo-text">CREATIVE 2026</div>
-        <p>عالم البرمجة وخدمات الـ SEO المتطورة</p>
-    </header>
-
     <div class="container">
+        <h1>منصة Creative 2026</h1>
+        <p>مرحباً بكم، أنا أشرف حسن، متخصص في تصميم واجهات المستخدم (UI/UX) واستشاري تحسين محركات البحث (SEO).</p>
         
-        <div class="card">
-            <img src="icon-512.png" alt="شعار كريفيتيف 2026">
-            <h1>أهلاً بك في منصتنا الرقمية</h1>
-            <p>نحن نقدم أفضل الحلول البرمجية وتصميم واجهات المستخدم UI/UX بلمسة احترافية.</p>
-        </div>
-
-        <div class="card">
-            <h2>خدماتنا المتخصصة</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>🚀 تحسين محركات البحث SEO</li>
-                <li>💻 تطوير تطبيقات الويب PWA</li>
-                <li>🎨 تصميم UI/UX احترافي</li>
+        <div style="border: 1px solid #D4AF37; padding: 15px; margin-top: 20px;">
+            <h2>خدماتنا التقنية</h2>
+            <ul>
+                <li>تحسين محركات البحث (SEO) للمدونات والمواقع.</li>
+                <li>تصميم واجهات احترافية ومعايير البرمجيات الخضراء.</li>
+                <li>تطوير تطبيقات الويب التقدمية (PWA).</li>
             </ul>
-            <a href="#" class="btn">اكتشف المزيد</a>
         </div>
 
+        <center>
+            <a href="#" class="btn">تواصل معنا</a>
+        </center>
     </div>
-
-    <footer><a href="contact.html">اتصل بنا</a>
-        <p>جميع الحقوق محفوظة &copy; 2026 - أشرف حسن</p>
-    </footer>
 
     <script>
-        // 1. تسجيل الـ Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                .then(reg => console.log('Service Worker Registered'))
-                .catch(err => console.log('Registration Failed', err));
-            });
-        }
-
-        // 2. إدارة تثبيت التطبيق
-        let deferredPrompt;
-        const installBanner = document.getElementById('installBanner');
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            installBanner.style.display = 'block';
-        });
-
-        function installApp() {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('User accepted the install prompt');
-                    }
-                    installBanner.style.display = 'none';
-                });
-            }
-        }
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
     </script>
 </body>
 </html>
