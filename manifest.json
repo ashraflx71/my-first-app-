@@ -1,12 +1,10 @@
 {
-  "name": "Creative 2026 SEO",
-  "short_name": "Creative2026",
-  "description": "منصة البرمجة وخدمات الـ SEO المتطورة",
-  "start_url": "/index.html",
+  "name": "Creative 2026",
+  "short_name": "Creative",
+  "start_url": "/my-first-app-/",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#FFD700",
-  "orientation": "portrait",
+  "theme_color": "#D4AF37",
   "icons": [
     {
       "src": "icon-192.png",
