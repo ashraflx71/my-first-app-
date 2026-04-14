@@ -1,1 +1,43 @@
 
+/* تصميم فخم بالألوان الملكية - Creative 2026 */
+body {
+    background-color: #000000; /* خلفية سوداء لتوفير الطاقة وفخامة التصميم */
+    color: #ffffff; /* نص أبيض مريح للعين */
+    font-size: 22px; /* حجم خط كبير للوضوح التام من الهاتف */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #D4AF37; /* لون ذهبي مطفي للعناوين الملكية */
+    text-align: center;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* زر احترافي */
+.btn {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
